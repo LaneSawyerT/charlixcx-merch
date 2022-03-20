@@ -1,0 +1,1 @@
+web: gunicorn charlixcx_merch.wsgi
