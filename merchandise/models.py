@@ -4,6 +4,10 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=70)
     friendly_name = models.CharField(max_length=70, null=True, blank=True)
 
@@ -15,6 +19,10 @@ class Category(models.Model):
 
 
 class Merch(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Merch'
+
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     product_name = models.CharField(max_length=254)
@@ -23,7 +31,6 @@ class Merch(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     is_limited = models.BooleanField(default=False, null=True, blank=True)
-    limited_number = models.IntegerField()
 
     def __str__(self):
-        return self.name
+        return self.product_name
