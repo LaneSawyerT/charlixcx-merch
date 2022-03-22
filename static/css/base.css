@@ -3,13 +3,26 @@ html {
 }
 
 body {
-    background: url("../media/crash.jpg") no-repeat center center fixed;
-    background-size: cover;
     height: calc(100vh - 164px);
     color: #001011;
     font-family: 'Bebas Neue', cursive;
 }
 
+.crash-image{
+    background: url("/media/crash.jpg") no-repeat center center;
+    background-size: cover;
+    color: #ff389c;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.banner {
+    height: calc(100vh - 164px);
+}
+
+.banner-text {
+    margin-left: 60%;
+    margin-top: 25%;
+}
 /* Buttons */
 .buy-now-button:hover,
 .buy-now-button:active,
