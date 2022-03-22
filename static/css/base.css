@@ -8,6 +8,8 @@ body {
     font-family: 'Bebas Neue', cursive;
 }
 
+/* Banner Image */
+
 .crash-image{
     background: url("/media/crash.jpg") no-repeat center center;
     background-size: cover;
@@ -23,6 +25,11 @@ body {
     margin-left: 60%;
     margin-top: 25%;
 }
+
+.mobile-nav {
+    color: #FFFFFC;
+}
+
 /* Buttons */
 .buy-now-button:hover,
 .buy-now-button:active,
