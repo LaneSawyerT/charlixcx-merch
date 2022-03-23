@@ -31,6 +31,7 @@ class Merch(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     is_limited = models.BooleanField(default=False, null=True, blank=True)
+    limited_number = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.product_name

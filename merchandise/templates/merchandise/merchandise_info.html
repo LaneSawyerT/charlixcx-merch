@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container my-5">
+                    {% if merch.featured_image %}
+                        <a href="{{ merch.featured_image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ merch.featured_image.url }}" alt="{{ merch.product_name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="" alt="{{ merch.product_name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <h3 class="mb-0">{{ merch.product_name }}</h3>
+                    <p class="lead mb-0 text-left font-weight-bold">${{ merch.product_price }}</p>
+                    <p class="mt-3">{{ merch.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
