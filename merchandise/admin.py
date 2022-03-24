@@ -16,7 +16,7 @@ class MerchAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
-        'name',
+        'product_name',
     )
 
 admin.site.register(Merch, MerchAdmin)

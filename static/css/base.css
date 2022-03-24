@@ -90,6 +90,27 @@ body {
     color: #ff389c !important;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+.main-header{
+    z-index: 2;
+    background: white;
+}
+
+/* Categories*/
+a.category-badge > span.badge:hover {
+    background: #ff389c;
+    color: #fff;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on desktop */
