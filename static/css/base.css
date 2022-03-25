@@ -41,6 +41,12 @@ body {
     color: #001011;
 }
 
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 .buy-now-button {
     background: black;
     color: white;

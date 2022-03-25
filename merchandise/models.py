@@ -32,6 +32,7 @@ class Merch(models.Model):
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     is_limited = models.BooleanField(default=False, null=True, blank=True)
     limited_number = models.IntegerField(null=True, blank=True)
+    product_hidden = models.BooleanField(default=False, null=True, blank=True)
 
     def __str__(self):
         return self.product_name
