@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'news',
     'merchandise',
+    'bag',
 ]
 
 MIDDLEWARE = [
@@ -178,3 +179,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+STANDARD_DELIVERY_PERCENTAGE = 15
