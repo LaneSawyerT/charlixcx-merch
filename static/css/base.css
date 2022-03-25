@@ -31,9 +31,9 @@ body {
 }
 
 /* Buttons */
-.buy-now-button:hover,
-.buy-now-button:active,
-.buy-now-button:focus,
+.buy-button:hover,
+.buy-button:active,
+.buy-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -110,6 +110,7 @@ a.category-badge > span.badge:hover {
     background: #ff389c;
     color: #fff;
 }
+
 
 /* Media Queries */
 
