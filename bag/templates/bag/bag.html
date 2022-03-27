@@ -38,17 +38,22 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
+                                        {% if item.product.sku != "UkraineDonation2022" %}
                                         <img class="img-fluid rounded" src="{{ item.product.featured_image.url }}">
+                                        {% endif %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                        <p class="my-0"><strong>{{ item.product.product_name }}</strong></p>
+                                        {% if item.product.sku != "UkraineDonation2022" %}
                                         <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                        {% endif %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.product_price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
+                                        {% if item.product.sku != "UkraineDonation2022" %}
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -80,10 +85,13 @@
                                             </div>
                                         </form>
                                         <a class="update-link text-info"><small>Update</small></a>
+                                        {% else %}
+                                        <p>{{ item.quantity }}</p>
+                                        {% endif %}
                                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
-                                    </td>                                    
+                                    </td> 
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">${{ item.product.product_price | calc_subtotal:item.quantity }}</p>
                                     </td>                                
                                 </tr>
                             {% endfor %}
@@ -92,8 +100,21 @@
                                     <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                    <p class="mb-1 text-danger">
-                                        You can donate €1.00 to help refugees from Ukraine!
+                                    <p class="mb-1 text-right">
+                                        {% check_bag bag_items as donated %}
+
+                                        {% if not donated %}
+                                        <form class="form" action="{% url 'add_to_bag' 13 %}" method="POST">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="quantity" value="1">
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                            <div class="form-row">
+                                                <input type="submit" class="btn rounded-0 text-danger mt-5" value="You can donate €1.00 to help refugees from Ukraine! Click here!">
+                                            </div>
+                                        </form>
+                                        {% else %}
+                                        <p class="text-danger">Thank you for donating to help Ukrainian refugees!</p>
+                                        {% endif %}
                                     </p>
                                 </td>
                             </tr>
@@ -154,4 +175,5 @@
              });
         })
     </script>
+    
     {% endblock %}

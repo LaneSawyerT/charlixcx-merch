@@ -10,7 +10,7 @@ from .models import Merch, Category
 def all_merch(request):
     """ A view to show all merchandise """
 
-    merch = Merch.objects.all()
+    merch = Merch.objects.exclude(sku="UkraineDonation2022")
     query = None
     categories = None
     sort = None
