@@ -9,7 +9,7 @@ from merchandise.models import Merch
 from bag.contexts import bag_contents
 
 import stripe
-
+import json
 
 @require_POST
 def cache_checkout_data(request):
@@ -48,7 +48,11 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[1]
+            order.stripe_pid = pid
+            order.original_bag = json.dumps(bag)
+            order.save()
             for item_id, item_data in bag.items():
                 try:
                     product = Merch.objects.get(id=item_id)
@@ -85,7 +89,7 @@ def checkout(request):
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
-            return redirect(reverse('products'))
+            return redirect(reverse('merchandise'))
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
