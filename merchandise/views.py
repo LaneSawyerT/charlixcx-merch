@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Merch, Category
-
+from .forms import MerchForm
 
 # Create your views here.
 def all_merch(request):
@@ -67,3 +67,14 @@ def merchandise_info(request, merch_id):
     }
 
     return render(request, 'merchandise/merchandise_info.html', context)
+
+
+def add_product(request):
+    """ Adds product to the store """
+    form = MerchForm()
+    template = 'merchandise/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
