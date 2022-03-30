@@ -69,22 +69,45 @@ def merchandise_info(request, merch_id):
     return render(request, 'merchandise/merchandise_info.html', context)
 
 
-def add_product(request):
-    """ Add a product to the store """
+def add_merchandise(request):
+    """ Adds merchandise to the store """
     if request.method == 'POST':
         form = MerchForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully added product!')
+            messages.success(request, 'Successfully added merchandise!')
             return redirect(reverse('add_merchandise'))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add merchandise. Please ensure the form is valid.')
     else:
         form = MerchForm()
         
     template = 'merchandise/add_merchandise.html'
     context = {
         'form': form,
+    }
+    return render(request, template, context)
+
+
+def edit_merchandise(request, product_id):
+    """ Edits merchandise in the store """
+    product = get_object_or_404(Merch, id=product_id)
+    if request.method == 'POST':
+        form = MerchForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated merchandise!')
+            return redirect(reverse('merchandise_info', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = MerchForm(instance=product)
+        messages.info(request, f'You are editing {product.product_name}')
+
+    template = 'merchandise/edit_merchandise.html'
+    context = {
+        'form': form,
+        'product': product,
     }
 
     return render(request, template, context)
