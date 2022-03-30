@@ -70,9 +70,19 @@ def merchandise_info(request, merch_id):
 
 
 def add_product(request):
-    """ Adds product to the store """
-    form = MerchForm()
-    template = 'merchandise/add_product.html'
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = MerchForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_merchandise'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = MerchForm()
+        
+    template = 'merchandise/add_merchandise.html'
     context = {
         'form': form,
     }
