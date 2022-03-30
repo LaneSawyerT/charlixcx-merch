@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+from profiles.models import UserProfile
+
 STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
@@ -19,7 +21,7 @@ class NewsPost(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
-        User, related_name='news_like', blank=True)
+        UserProfile, related_name='news_like', blank=True)
 
     class Meta:
         ordering = ["-created_on"]

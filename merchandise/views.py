@@ -74,9 +74,9 @@ def add_merchandise(request):
     if request.method == 'POST':
         form = MerchForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            merch = form.save()
             messages.success(request, 'Successfully added merchandise!')
-            return redirect(reverse('add_merchandise'))
+            return redirect(reverse('merchandise_info', args=[merch.id]))
         else:
             messages.error(request, 'Failed to add merchandise. Please ensure the form is valid.')
     else:
@@ -89,25 +89,33 @@ def add_merchandise(request):
     return render(request, template, context)
 
 
-def edit_merchandise(request, product_id):
+def edit_merchandise(request, merch_id):
     """ Edits merchandise in the store """
-    product = get_object_or_404(Merch, id=product_id)
+    merch = get_object_or_404(Merch, id=merch_id)
     if request.method == 'POST':
         form = MerchForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated merchandise!')
-            return redirect(reverse('merchandise_info', args=[product.id]))
+            return redirect(reverse('merchandise_info', args=[merch.id]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
-        form = MerchForm(instance=product)
-        messages.info(request, f'You are editing {product.product_name}')
+        form = MerchForm(instance=merch)
+        messages.info(request, f'You are editing {merch.product_name}')
 
     template = 'merchandise/edit_merchandise.html'
     context = {
         'form': form,
-        'product': product,
+        'product': merch,
     }
 
     return render(request, template, context)
+
+
+def delete_merchandise(request, merch_id):
+    """ Deletes selected merchandise from the store """
+    merch = get_object_or_404(Merch, id=merch_id)
+    merch.delete()
+    messages.success(request, 'Item deleted!')
+    return redirect(reverse('merchandise'))
