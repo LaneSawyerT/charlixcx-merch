@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -69,8 +70,13 @@ def merchandise_info(request, merch_id):
     return render(request, 'merchandise/merchandise_info.html', context)
 
 
+@login_required
 def add_merchandise(request):
     """ Adds merchandise to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = MerchForm(request.POST, request.FILES)
         if form.is_valid():
@@ -89,11 +95,16 @@ def add_merchandise(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_merchandise(request, merch_id):
     """ Edits merchandise in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+        
     merch = get_object_or_404(Merch, id=merch_id)
     if request.method == 'POST':
-        form = MerchForm(request.POST, request.FILES, instance=product)
+        form = MerchForm(request.POST, request.FILES, instance=merch)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated merchandise!')
@@ -113,8 +124,12 @@ def edit_merchandise(request, merch_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_merchandise(request, merch_id):
     """ Deletes selected merchandise from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     merch = get_object_or_404(Merch, id=merch_id)
     merch.delete()
     messages.success(request, 'Item deleted!')
