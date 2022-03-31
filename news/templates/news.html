@@ -18,7 +18,7 @@
                                 <img class="card-img-top" src=" {{ news_post.featured_image.url }}">
                                 {% endif %}
                             </div>
-                            <a href="#">
+                            <a href="{{ news_post.slug }}">
                                 <h2 class="card-title">{{ news_post.post_title }}</h2>
                             </a>
                             <p>Author: {{ news_post.author }}</p>

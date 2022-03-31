@@ -74,7 +74,7 @@ def merchandise_info(request, merch_id):
 def add_merchandise(request):
     """ Adds merchandise to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only authorised users can do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -99,9 +99,9 @@ def add_merchandise(request):
 def edit_merchandise(request, merch_id):
     """ Edits merchandise in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only authorised users can do that.')
         return redirect(reverse('home'))
-        
+
     merch = get_object_or_404(Merch, id=merch_id)
     if request.method == 'POST':
         form = MerchForm(request.POST, request.FILES, instance=merch)
@@ -128,7 +128,7 @@ def edit_merchandise(request, merch_id):
 def delete_merchandise(request, merch_id):
     """ Deletes selected merchandise from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only authorised users can do that.')
         return redirect(reverse('home'))
     merch = get_object_or_404(Merch, id=merch_id)
     merch.delete()

@@ -24,10 +24,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-3">
                 {% for like in likes %}
-                {{ like }}
-                <div class="col-2">
+                <div class="card mb-4">
+                    <h2> {{ like }}</h2>
                     <img src='{{ like.featured_image.url }}'/>
                 </div>
                 {% endfor%}
