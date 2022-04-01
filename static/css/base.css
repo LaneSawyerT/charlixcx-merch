@@ -179,6 +179,25 @@ a.category-badge > span.badge:hover {
     color: #fff;
 }
 
+/* News */
+.news-header {
+    margin-top: 15%;
+}
+
+/* Merch */
+.merch-header{
+    margin-top: 3%;
+}
+
+/*links*/
+a {
+    color:#001011;
+}
+
+a:hover {
+    color:#ff389c;
+}
+
 /* toasts */
 
 .message-container {

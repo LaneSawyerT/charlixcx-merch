@@ -11,8 +11,8 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
+        <div class="row merch-header">
+            <div class="col-12 text-center mt-3">
                 <h2 class="logo-font">Merchandise</h2>
                 {% for c in current_categories %}
                 <a class="category-badge text-decoration-none" href="{% url 'merchandise' %}?category={{ c.product_name }}">
@@ -65,7 +65,7 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ merchandise.product_name }}</p>
+                                    <a href="{% url 'merchandise_info' merchandise.id %}"" class="mb-0">{{ merchandise.product_name }}</a>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
@@ -74,7 +74,7 @@
                                             <p class="lead mb-0 text-left font-weight-bold">${{ merchandise.product_price }}</p>
                                             {% if merchandise.category %}
                                             <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'merchandise' %}?category={{ merchandise.category.name }}">
+                                                <a class="text-muted" href="{% url 'merchandise' %}?category={{ merchandise.category.product_name }}">
                                                     <i class="fas fa-tag mr-1"></i>{{ merchandise.category.friendly_name }}
                                                 </a>
                                             </p>

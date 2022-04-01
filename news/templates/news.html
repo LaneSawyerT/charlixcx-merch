@@ -3,24 +3,30 @@
 {% block content %}
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row news-header">
+        <div class="col-12 text-center mt-3">
+            <h2 class="logo-font">News:</h2>
+        <hr class="w-50 mb-1">
+        </div>
 
         <!-- News Posts -->
         <div class="col-12 mt-3 left">
-            <div class="row">
+            <div class="row justify-content-center">
                 {% for news_post in object_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
+                <div class=" col-md-6">
+                    <div class="card mb-6">
                         <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in news_post.featured_image.url %}
-                                {% else %}
-                                <img class="card-img-top" src=" {{ news_post.featured_image.url }}">
-                                {% endif %}
-                            </div>
                             <a href="{{ news_post.slug }}">
                                 <h2 class="card-title">{{ news_post.post_title }}</h2>
                             </a>
+
+                            <div class="text-center">
+                                {% if "placeholder" in news_post.featured_image.url %}
+                                {% else %}
+                                <img class="" height="200px" width="200px" src=" {{ news_post.featured_image.url }}" alt="Picture of {{ news_post.post_title }}">">
+                                {% endif %}
+                            </div>
+                            <p>{{ news_post.content|truncatechars:50 }}</p>
                             <p>Author: {{ news_post.author }}</p>
                             <hr />
                             <p class="card-text text-muted h6">{{ news_post.created_on}} <i class="far fa-heart"></i>
@@ -28,9 +34,9 @@
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:2 %}
+                {% if forloop.counter|divisibleby:1 %}
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 {% endif %}
                 {% endfor %}
 
