@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-3"><strong>Charli</strong> Xcx</h2>
+                    <img src='{{ MEDIA_URL }}logo.jpg' width='50%'/>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-none d-lg-block">
@@ -74,7 +74,7 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
+                            <div class="text-center head-links">
                                 <div><i class="fa-solid fa-circle-user fa-lg"></i></div>
                                 <p class="my-2">My Account</p>
                             </div>
@@ -95,7 +95,7 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
-                            <div class="text-center">
+                            <div class="text-center head-links">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-2">
                                     {% if total %}
@@ -111,10 +111,10 @@
             </div>
         </div>
         <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <nav class="navbar navbar-expand-lg  w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-lg"></i></span>
                 </button>
                 {% include 'includes/main-nav.html' %}
                 {% include 'includes/mobile-top-header.html' %}

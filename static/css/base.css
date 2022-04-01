@@ -4,21 +4,29 @@ html {
 
 body {
     height: calc(100vh - 164px);
-    color: #001011;
     font-family: 'Bebas Neue', cursive;
 }
 
 /* Banner Image */
 
-.crash-image{
+.crash-image-desktop{
     background: url("/media/crash.jpg") no-repeat center center;
     background-size: cover;
     color: #ff389c;
     font-family: 'Bebas Neue', cursive;
+    height: 70vh;    
 }
 
-.banner {
-    height: calc(100vh - 164px);
+.crash-image-tablet{
+    background: url("/media/crash.jpg") no-repeat center center;
+    background-size: cover;
+    margin-top: 18%;
+}
+
+.crash-image-mobile{
+    background: url("/media/crash.jpg") no-repeat center center;
+    background-size: cover;
+    margin-top: 10%;
 }
 
 .banner-text {
@@ -86,14 +94,68 @@ body {
     width: fit-content;
 }
 
+/* Header Links */
+.head-links {
+    color:#001011;
+}
+
+.head-links:hover {
+    color: #ff389c !important;
+}
 
 /* Navbar */
+.navbar-text {
+    color: #16181b;
+    letter-spacing: 2px;
+}
+
+.nav-item{
+    color: #16181b;
+}
+
 .nav-item:hover {
     color: #ff389c !important;
 }
 
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #ff389c;
+}
+
+/* hover Underline effect from 30secondsofcode.org */
+
+.navbar-text {
+    display: inline-block;
+    letter-spacing: 2px;
+    position: relative;
+    color: #16181b;
+  }
+
 .navbar-text:hover {
-    color: #ff389c !important;
+      color: #ff389c;
+  }
+  
+.navbar-text:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff389c;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+.navbar-text:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.navbar-toggler-icon {
+    color: #001011;
 }
 
 .overlay {

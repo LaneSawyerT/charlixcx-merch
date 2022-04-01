@@ -1,6 +1,6 @@
 <li class="list-inline-item">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
+        <div class="text-center head-links">
             <div><i class="fas fa-search fa-lg"></i></div>
             <p class="my-0">Search</p>
         </div>
@@ -22,9 +22,9 @@
 </li>
 <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
+        <div class="text-center head-links">
             <div><i class="fas fa-user fa-lg"></i></div>
-            <p class="my-0">My Account</p>
+            <p class="my-0 ">My Account</p>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -42,7 +42,7 @@
 </li>
 <li class="list-inline-item">
     <a class="{% if total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
-        <div class="text-center">
+        <div class="text-center head-links">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
             <p class="my-0">
                 {% if total %}
