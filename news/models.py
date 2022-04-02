@@ -6,11 +6,28 @@ from profiles.models import UserProfile
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 # Create your models here.
+class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+    tag_name = models.CharField(max_length=70)
+    friendly_name = models.CharField(max_length=70, null=True, blank=True)
+
+    def __str__(self):
+        return self.tag_name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
 class NewsPost(models.Model):
     """
     Where the news post is created
     """
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     post_title = models.CharField(max_length=40, unique=True)
     slug = models.SlugField(max_length=40, unique=True)
     author = models.ForeignKey(

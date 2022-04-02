@@ -19,7 +19,8 @@
                 <a href="{% url 'merchandise' %}?category=shirts" class="dropdown-item">Shirts</a>
                 <a href="{% url 'merchandise' %}?category=hoodies" class="dropdown-item">Hoodies</a>
                 <a href="{% url 'merchandise' %}?category=scarves" class="dropdown-item">Scarves</a>
-                <a href="{% url 'merchandise' %}?category=shirts,hoodies,scarves" class="dropdown-item">All Apparel</a>
+                <a href="{% url 'merchandise' %}?category=jumpers" class="dropdown-item">Jumpers</a>
+                <a href="{% url 'merchandise' %}?category=shirts,hoodies,scarves,jumpers" class="dropdown-item">All Apparel</a>
             </div>
         </li>
 
@@ -30,8 +31,9 @@
             <div class="dropdown-menu border-1" aria-labelledby="accessories-link">
                 <a href="{% url 'merchandise' %}?category=keychains,chains" class="dropdown-item">Keychains</a>
                 <a href="{% url 'merchandise' %}?category=stickers" class="dropdown-item">Stickers</a>
+                <a href="{% url 'merchandise' %}?category=phone_cases" class="dropdown-item">Phone Cases</a>
                 <a href="{% url 'merchandise' %}?category=bags" class="dropdown-item">Bags</a>
-                <a href="{% url 'merchandise' %}?category=keychains,chains,stickers,bags" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'merchandise' %}?category=keychains,chains,stickers,phone_cases,bags" class="dropdown-item">All Accessories</a>
             </div>
         </li>
 
@@ -42,7 +44,8 @@
             <div class="dropdown-menu border-0" aria-labelledby="music-link">
                 <a href="{% url 'merchandise' %}?category=cds" class="dropdown-item">CDs</a>
                 <a href="{% url 'merchandise' %}?category=vinyls" class="dropdown-item">Vinyls</a>
-                <a href="{% url 'merchandise' %}?category=cds,vinyls" class="dropdown-item">All Music</a>
+                <a href="{% url 'merchandise' %}?category=posters" class="dropdown-item">Posters</a>
+                <a href="{% url 'merchandise' %}?category=cds,vinyls,posters" class="dropdown-item">All Music</a>
             </div>
         </li>
         <li class="nav-item dropdown">
