@@ -11,6 +11,23 @@ body {
     font-family: 'Baskerville';
 }
 
+/*footer*/
+
+footer {
+    background-color: #212121;
+}
+.footer-socials{
+    background-color:#001011;
+}
+
+.footer-links {
+    color: #fff;
+}
+
+.footer-links:hover{
+    color: #ff389c;
+}
+
 /* Banner Image */
 
 .crash-image-desktop{
@@ -30,7 +47,7 @@ body {
 .crash-image-mobile{
     background: url("/media/crash.jpg") no-repeat center center;
     background-size: contain;
-    margin-top: 10%;
+    margin-top: -24%;
 }
 
 .banner-text {
@@ -43,6 +60,9 @@ body {
 }
 
 /* Buttons */
+.btn:hover,
+.btn:active,
+.btn:focus
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -65,8 +85,11 @@ body {
 .buy-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    min-width: 130px;
+    margin-left: 10%;
+    margin-bottom: 10%;
 }
+
 
 /* Banner */
 
@@ -301,6 +324,7 @@ a:hover {
 
 .sign-up {
     margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 .allauth-form-inner-content p {

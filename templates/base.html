@@ -99,9 +99,9 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-2">
                                     {% if total %}
-                                    ${{ total|floatformat:2 }}
+                                    €{{ total|floatformat:2 }}
                                     {% else %}
-                                    $0.00
+                                    €0.00
                                     {% endif %}
                                 </p>
                             </div>
@@ -156,28 +156,117 @@
     {% endblock %}
 
     <!-- Footer -->
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col s12 center">
-                    <h5 class="">Follow Us</h5>
-                    <h2><a href="https://www.facebook.com" target="_blank"><i
-                                class="fab fa-facebook light-grey-text text-darken-4"></i></a>
-                        <a href="https://www.twitter.com" target="_blank"><i
-                                class="fab fa-twitter light-grey-text text-darken-4"></i></a>
-                        <a href="https://www.instagram.com" target="_blank"><i
-                                class="fab fa-instagram light-grey-text text-darken-4"></i></a></h2>
-                    <p class="">Follow us on social media.</p>
+
+    <footer class="text-center text-lg-start text-white">
+        <!-- Social media footer -->
+        <section class="d-flex justify-content-between p-4 footer-socials">
+            <!-- Left -->
+            <div class="me-5">
+                <span>Follow me on Social Media:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="https://www.youtube.com/user/officialcharlixcx" target="_blank" class="text-white me-4">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/CharliXCX" target="_blank" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/charli_xcx" class="text-white me-4">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/charli_xcx/" target="_blank" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold">Charli Xcx</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #ff389c; height: 2px" />
+                        <p>
+                            The official Charli XCX store - shop all of the latest Charli XCX merchandise including Charli XCX tees, Charli XCX jumpers, Charli XCX accessories and much more! 
+                        </p>
+                    </div>
+                    <!----- Merchandise Links Footer------>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Merchandise</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #ff389c; height: 2px" />
+                        <p>
+                            <a class="footer-links" href="{% url 'merchandise' %}" class="text-white">All
+                                Merchandise</a>
+                        </p>
+                        <p>
+                            <a class="footer-links" href="{% url 'merchandise' %}?category="
+                                class="text-white">Apparel</a>
+                        </p>
+                        <p>
+                            <a class="footer-links" href="{% url 'merchandise' %}?category="
+                                class="text-white">Accessories</a>
+                        </p>
+                        <p>
+                            <a class="footer-links" href="{% url 'merchandise' %}?category="
+                                class="text-white">Music</a>
+                        </p>
+                    </div>
+                    <!----- Link footers------>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #ff389c; height: 2px" />
+                        <p>
+
+                            {% if request.user.is_authenticated %}
+                            <a class="footer-links" href="{% url 'profile' %}">My Account</a>
+                            {% else %}
+                            <a class="footer-links" href="{% url 'account_signup' %}">Register</a>
+                        </p>
+                        <p>
+                            <a class="footer-links" href="{% url 'account_login' %}">Login</a>
+                            {% endif %}
+                        </p>
+                        <p>
+                            <a class="footer-links" href="{% url 'news' %}" class="text-white">News</a>
+                        </p>
+                    </div>
+                    <!----- Contact Footer------>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Contact via Atlantic Records</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #ff389c; height: 2px" />
+                        <p class="text-center"><i class="fas fa-home mr-3"></i>
+                            Various Artists Management<br>
+                            37 Lonsdale Road<br>
+                            London NW6 6RA<br>
+                            UK </p>
+                        <p><i class="fas fa-envelope mr-3"></i> contact@atlanticrecords.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> +44(0)207 372 6075 </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-copyright center">
-            <div class="container">
-                © Copyright Limited 2022. All Rights Reserved
-            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-white" target="_blank" href="https://charlixcx-merch.herokuapp.com/">Charli XCx</a>
         </div>
     </footer>
-
 
     {% block postloadjs %}
     <script type="text/javascript">

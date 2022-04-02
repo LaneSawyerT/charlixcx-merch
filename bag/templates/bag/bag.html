@@ -53,7 +53,7 @@
                             {% endif %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.product_price }}</p>
+                            <p class="my-0">€{{ item.product.product_price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             {% if item.product.sku != "UkraineDonation2022" %}
@@ -94,15 +94,15 @@
                                 data-product_size="{{ item.size }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.product_price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0">€{{ item.product.product_price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                            <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                             <p class="mb-1 text-right">
                                 {% check_bag bag_items as donated %}
 
@@ -111,8 +111,8 @@
                                     {% csrf_token %}
                                     <input type="hidden" name="quantity" value="1">
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                    <div class="form-row">
-                                        <input type="submit" class="btn rounded-0 text-danger mt-5"
+                                    <div class="form-row justify-content-end">
+                                        <input type="submit" class="btn rounded-0  mt-5"
                                             value="You can donate €1.00 to help refugees from Ukraine! Click here!">
                                     </div>
                                 </form>
