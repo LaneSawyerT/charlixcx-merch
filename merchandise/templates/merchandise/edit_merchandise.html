@@ -2,36 +2,38 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Merchandise Management</h2>
-                <h5 class="text-muted">Edit Merchandise</h5>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'edit_merchandise' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'merchandise' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Update Merchandise</button>
-                    </div>
-                </form>
-            </div>            
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="logo-font mb-4">Merchandise Management</h2>
+            <h5 class="text-muted">Edit Merchandise</h5>
+            <hr>
         </div>
     </div>
+    <!------- Edit Merchandise Items -------->
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'edit_merchandise' product.id %}" class="form mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-right">
+                    <a class="btn btn-outline-black rounded-0" href="{% url 'merchandise' %}">Cancel</a>
+                    <button class="btn btn-black rounded-0" type="submit">Update Merchandise</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

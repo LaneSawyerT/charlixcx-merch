@@ -7,6 +7,10 @@ body {
     font-family: 'Bebas Neue', cursive;
 }
 
+.text-content {
+    font-family: 'Baskerville';
+}
+
 /* Banner Image */
 
 .crash-image-desktop{
@@ -25,7 +29,7 @@ body {
 
 .crash-image-mobile{
     background: url("/media/crash.jpg") no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     margin-top: 10%;
 }
 
@@ -39,14 +43,17 @@ body {
 }
 
 /* Buttons */
-.buy-button:hover,
-.buy-button:active,
-.buy-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
     background: #ff389c;
     color: #001011;
+}
+
+.btn {
+    background: black;
+    color: white;
+    z-index: 0 !important;
 }
 
 .btt-link,
@@ -182,6 +189,19 @@ a.category-badge > span.badge:hover {
 /* News */
 .news-header {
     margin-top: 15%;
+}
+
+.news_image {
+    width: 300px;
+    height: 300px;
+}
+
+.masthead {
+    margin-top: 10%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
 /* Merch */

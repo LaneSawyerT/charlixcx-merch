@@ -2,157 +2,173 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="row merch-header">
-            <div class="col-12 text-center mt-3">
-                <h2 class="logo-font">Merchandise</h2>
-                {% for c in current_categories %}
-                <a class="category-badge text-decoration-none" href="{% url 'merchandise' %}?category={{ c.product_name }}">
-                    <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
-                </a>
+<div class="container-fluid">
+    <div class="row merch-header">
+        <div class="col-12 text-center mt-3">
+            <h2 class="logo-font">Merchandise</h2>
+            {% for c in current_categories %}
+            <a class="category-badge text-decoration-none" href="{% url 'merchandise' %}?category={{ c.product_name }}">
+                <span
+                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+            </a>
             {% endfor %}
             <hr class="w-50 mb-1">
-            </div>
         </div>
-        <div class="row">
-            <div class="merchandise-container col-10 offset-1">
-                <div class="row mt-1 mb-2">
-
-                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper w-50">
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="product_price-asc" {% if current_sorting == 'product_price-asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="product_price-desc" {% if current_sorting == 'product_price-desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="product_name-asc" {% if current_sorting == 'product_name-asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="product_name-desc" {% if current_sorting == 'product_name-desc' %}selected{% endif %}>Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                            </select>
-                        </div>
+    </div>
+    <!------- Sort By Bar -------->
+    <div class="row">
+        <div class="merchandise-container col-10 offset-1">
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector"
+                            class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                            </option>
+                            <option value="product_price-asc"
+                                {% if current_sorting == 'product_price-asc' %}selected{% endif %}>Price (low to high)
+                            </option>
+                            <option value="product_price-desc"
+                                {% if current_sorting == 'product_price-desc' %}selected{% endif %}>Price (high to low)
+                            </option>
+                            <option value="product_name-asc"
+                                {% if current_sorting == 'product_name-asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="product_name-desc"
+                                {% if current_sorting == 'product_name-desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                Category (A-Z)</option>
+                            <option value="category_desc"
+                                {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
                     </div>
-
-                    <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
-                            {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'merchandise' %}">Merchandise Home</a> | </span>
-                            {% endif %}
-                            {{ merch|length }} Merchandise{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                        </p>
-                    </div>
-
                 </div>
-                <div class="row">
-                    {% for merchandise in merch %}
-                    {% if not merchandise.product_hidden %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if merchandise.featured_image %}
-                                <a href="{% url 'merchandise_info' merchandise.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ merchandise.featured_image.url }}" alt="{{ merchandise.product_name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'merchandise_info' merchandise.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}not_available.png" alt="{{ merchandise.product_name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <a href="{% url 'merchandise_info' merchandise.id %}"" class="mb-0">{{ merchandise.product_name }}</a>
+                <!------- Number of Merchandise Items -------->
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-center text-md-left">
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'merchandise' %}">Merchandise Home</a> | </span>
+                        {% endif %}
+                        {{ merch|length }} Merchandise{% if search_term %} found for
+                        <strong>"{{ search_term }}"</strong>{% endif %}
+                    </p>
+                </div>
+            </div>
+            <!------- Merchandise Items -------->
+            <div class="row">
+                {% for merchandise in merch %}
+                {% if not merchandise.product_hidden %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0">
+                        {% if merchandise.featured_image %}
+                        <a href="{% url 'merchandise_info' merchandise.id %}">
+                            <img class="card-img-top img-fluid" src="{{ merchandise.featured_image.url }}"
+                                alt="{{ merchandise.product_name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'merchandise_info' merchandise.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}not_available.png"
+                                alt="{{ merchandise.product_name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <a href="{% url 'merchandise_info' merchandise.id %}"" class="
+                                mb-0">{{ merchandise.product_name }}</a>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">${{ merchandise.product_price }}</p>
+                                    {% if merchandise.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted"
+                                            href="{% url 'merchandise' %}?category={{ merchandise.category.product_name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ merchandise.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                    <!------- Admin Merchandise Usage -------->
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_merchandise' merchandise.id %}">Edit</a> |
+                                        <a class="text-danger"
+                                            href="{% url 'delete_merchandise' merchandise.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ merchandise.product_price }}</p>
-                                            {% if merchandise.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'merchandise' %}?category={{ merchandise.category.product_name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ merchandise.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_merchandise' merchandise.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_merchandise' merchandise.id %}">Delete</a>
-                                                </small>
-                                            {% endif %}
-                                        </div>
-
-
-                                    </div>
-                                </div>                            
                             </div>
                         </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% endif %}
-                    {% endfor %}
+                    </div>
                 </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
-    <div class="btt-button shadow-sm rounded-0 border border-black">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-        </a>	
-    </div>
+</div>
+<div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("-")[0];
-                var direction = selectedVal.split("-")[1];
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("-")[0];
+            var direction = selectedVal.split("-")[1];
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
 
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}

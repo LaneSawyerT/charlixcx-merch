@@ -3,11 +3,12 @@ from django.views import generic, View
 
 from django.http import HttpResponseRedirect
 from .models import NewsPost, Category
+from profiles.models import UserProfile
 
 # Create your views here.
 class NewsPostList(generic.ListView):
     model = NewsPost
-    queryset = NewsPost.objects.filter(status=1).order_by('created_on')
+    queryset = NewsPost.objects.filter(status=1).order_by('-created_on')
     template_name = "news.html"
     paginate_by = 4
 
@@ -35,10 +36,11 @@ class PostLike(View):
 
     def post(self, request, slug):
         post = get_object_or_404(NewsPost, slug=slug)
+        user = get_object_or_404(UserProfile, user=request.user)
 
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
+        if post.likes.filter(id=user.id).exists():
+            post.likes.remove(user)
         else:
-            post.likes.add(request.user)
+            post.likes.add(user)
         
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))

@@ -1,23 +1,22 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in post.featured_image.url %}
+                <img class="news_image" src="{{ MEDIA_URL }}not_available.png" width="100%">
+                {% else %}
+                <img class="news_image" src=" {{ post.featured_image.url }}" width="100%">
+                {% endif %}
+            </div>            
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
+                <!------- News Post details -------->
                 <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="" width="100%">
-                {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
-                {% endif %}
-            </div>
+
         </div>
     </div>
 </div>
@@ -26,11 +25,10 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
+                <!-- News post content -->
+                <div class="text-content card-text ">
                     {{ post.content | safe }}
-                </p>
+                </div>
                 <div class="row">
 
                     <div class="col-1">
@@ -58,19 +56,8 @@
                             <span class="text-secondary"> {{ post.number_of_likes }}</span>
                         </strong>
 
-                    </div>                
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-        <div class="col-md-4 card mb-4 mt-3 ">
-            <div class="card-body">
-                <!-- For later -->
             </div>
         </div>
     </div>

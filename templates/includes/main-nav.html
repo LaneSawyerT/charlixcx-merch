@@ -1,7 +1,8 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="navbar-text font-weight-bold nav-link mr-5" href="#" id="all-merchandise-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="navbar-text font-weight-bold nav-link mr-5" href="#" id="all-merchandise-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Merchandise
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-merchandise-link">
@@ -10,9 +11,11 @@
                 <a href="{% url 'merchandise' %}" class="dropdown-item">All Merchandise</a>
             </div>
         </li>
-
+        <!------- Apparel Drop Down -------->
         <li class="nav-item dropdown">
-            <a class="navbar-text font-weight-bold nav-link text-black mr-5" href="{% url 'merchandise' %}?category=shirts,hoodies,scarves" id="apparel-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="navbar-text font-weight-bold nav-link text-black mr-5"
+                href="{% url 'merchandise' %}?category=shirts,hoodies,scarves" id="apparel-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Apparel
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="apparel-link">
@@ -20,12 +23,15 @@
                 <a href="{% url 'merchandise' %}?category=hoodies" class="dropdown-item">Hoodies</a>
                 <a href="{% url 'merchandise' %}?category=scarves" class="dropdown-item">Scarves</a>
                 <a href="{% url 'merchandise' %}?category=jumpers" class="dropdown-item">Jumpers</a>
-                <a href="{% url 'merchandise' %}?category=shirts,hoodies,scarves,jumpers" class="dropdown-item">All Apparel</a>
+                <a href="{% url 'merchandise' %}?category=shirts,hoodies,scarves,jumpers" class="dropdown-item">All
+                    Apparel</a>
             </div>
         </li>
-
+        <!------- Accessories Drop Down -------->
         <li class="nav-item dropdown">
-            <a class="navbar-text font-weight-bold nav-link text-black mr-5" href="{% url 'merchandise' %}?category=keychains,chains,stickers,bags" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="navbar-text font-weight-bold nav-link text-black mr-5"
+                href="{% url 'merchandise' %}?category=keychains,chains,stickers,bags" id="accessories-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
             <div class="dropdown-menu border-1" aria-labelledby="accessories-link">
@@ -33,12 +39,15 @@
                 <a href="{% url 'merchandise' %}?category=stickers" class="dropdown-item">Stickers</a>
                 <a href="{% url 'merchandise' %}?category=phone_cases" class="dropdown-item">Phone Cases</a>
                 <a href="{% url 'merchandise' %}?category=bags" class="dropdown-item">Bags</a>
-                <a href="{% url 'merchandise' %}?category=keychains,chains,stickers,phone_cases,bags" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'merchandise' %}?category=keychains,chains,stickers,phone_cases,bags"
+                    class="dropdown-item">All Accessories</a>
             </div>
         </li>
-
+        <!------- Music Drop Down -------->
         <li class="nav-item dropdown">
-            <a class="navbar-text font-weight-bold nav-link text-black mr-5" href="{% url 'merchandise' %}?category=cds,vinyls" id="music-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="navbar-text font-weight-bold nav-link text-black mr-5"
+                href="{% url 'merchandise' %}?category=cds,vinyls" id="music-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Music
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="music-link">
@@ -48,8 +57,9 @@
                 <a href="{% url 'merchandise' %}?category=cds,vinyls,posters" class="dropdown-item">All Music</a>
             </div>
         </li>
+        <!------- News link -------->
         <li class="nav-item dropdown">
-            <a class="navbar-text font-weight-bold nav-link" href="{% url 'news' %}" >
+            <a class="navbar-text font-weight-bold nav-link" href="{% url 'news' %}">
                 News
             </a>
         </li>

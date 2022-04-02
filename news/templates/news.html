@@ -6,10 +6,10 @@
     <div class="row news-header">
         <div class="col-12 text-center mt-3">
             <h2 class="logo-font">News:</h2>
-        <hr class="w-50 mb-1">
+            <hr class="w-50 mb-1">
         </div>
 
-        <!-- News Posts -->
+        <!------- News Posts -------->
         <div class="col-12 mt-3 left">
             <div class="row justify-content-center">
                 {% for news_post in object_list %}
@@ -23,24 +23,25 @@
                             <div class="text-center">
                                 {% if "placeholder" in news_post.featured_image.url %}
                                 {% else %}
-                                <img class="" height="200px" width="200px" src=" {{ news_post.featured_image.url }}" alt="Picture of {{ news_post.post_title }}">">
+                                <img class="" height="200px" width="200px" src=" {{ news_post.featured_image.url }}"
+                                    alt="Picture of {{ news_post.post_title }}">
                                 {% endif %}
                             </div>
                             <p>{{ news_post.content|truncatechars:100| safe }}</p>
                             <p>Author: {{ news_post.author }}</p>
                             <hr />
-                            <p class="card-text text-muted h6">{{ news_post.created_on}} <i class="far fa-heart"></i>
-                                {{ news_post.number_of_likes }}</p>
+                            <p class="card-text text-muted h6">{{ news_post.created_on}} 
                                 
-                                {% if news.category %}
-                                <p class="small mt-1 mb-0">
-                                    <a class="text-muted" href="{% url 'news' %}?category={{ news.category.tag_name }}">
-                                        <i class="fas fa-tag mr-1"></i>{{ news.category.friendly_name }}
-                                    </a>
-                                </p>
-                                {% endif %}
+                                <i class="far fa-heart"></i>
+                                {{ news_post.number_of_likes }}</p>
 
-
+                            {% if news_post.category %}
+                            <p class="small mt-1 mb-0">
+                                <a class="text-muted" href="{% url 'news' %}?category={{ news_post.category }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ news_post.category.friendly_name }}
+                                </a>
+                            </p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

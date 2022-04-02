@@ -22,6 +22,8 @@
 
     <div class="row">
         <div class="col">
+            <!------- Bag Items info -------->
+
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
@@ -38,13 +40,9 @@
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            {% if item.product.sku != "UkraineDonation2022" %}
                             <img class="img-fluid rounded" src="{{ item.product.featured_image.url }}"
                                 alt="{{ item.product.product_name }}">
-                            {% else %}
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}not_available.png"
-                                alt="{{ item.product.product_name }}">
-                            {% endif %} </td>
+                        </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.product.product_name }}</strong></p>
                             {% if item.product.sku != "UkraineDonation2022" %}
@@ -125,6 +123,8 @@
                         </td>
                     </tr>
                     <tr>
+                        <!------- Checkout button/ Continue Shopping -------->
+
                         <td colspan="5" class="text-right">
                             <a href="{% url 'merchandise' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                 <span class="icon">
