@@ -45,7 +45,7 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.product.product_name }}</strong></p>
-                            {% if item.product.sku != "UkraineDonation2022" %}
+                            {% if not item.product.is_hidden %}
                             <p class="my-0"><strong>Size:
                                 </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
                             </p>
@@ -56,7 +56,7 @@
                             <p class="my-0">€{{ item.product.product_price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            {% if item.product.sku != "UkraineDonation2022" %}
+                            {% if not item.product.product_hidden and not item.product.is_limited %}
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">

@@ -18,6 +18,7 @@ footer {
 }
 .footer-socials{
     background-color:#001011;
+    padding:15px;
 }
 
 .footer-links {
@@ -70,6 +71,11 @@ footer {
     color: #001011;
 }
 
+.btn-outline-black:hover {
+    background: #ff389c;
+    color: #001011;
+}
+
 .btn {
     background: black;
     color: white;
@@ -99,11 +105,20 @@ footer {
     justify-content: center;
 }
 
-.banner-font {
+.banner-link {
     text-transform: uppercase;
     justify-content: center;
+    color: white;
 }
 
+.banner-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.mobile-space {
+    margin-top: 20%;
+}
 
 /* Header */
 /* Some code taken from Bulma */
@@ -116,7 +131,6 @@ footer {
 }
 
 .logo-font {
-    text-transform: uppercase;
     justify-content: center;
 }
 
@@ -324,6 +338,10 @@ a:hover {
 
 .sign-up {
     margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.profile-data {
     margin-bottom: 5%;
 }
 

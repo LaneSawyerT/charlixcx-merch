@@ -122,7 +122,17 @@
         </div>
         <!------- Limited Vinyl Banner -------->
         <div class="row album-banner">
-            <h4 class="banner-font my-1 text-center">Buy New Limited Edition Vinyl of Crash!</h4>
+            <h4 class="banner-font my-1 text-center"><a class="banner-link" href="/merchandise/32">Buy New Limited Edition Vinyl of Crash!
+                {% if merch.sku == "LMECrash/VinylXcx2022lmtd" %}
+                
+                    {% if merch.limited_number == 0 %}
+                        <span style="color: red;">Sorry! Sold out!</span>
+                    {% else %}
+                        Only <span style="color: black;">{{merch.limited_number}}</span> in stock!
+                    {% endif %}
+                
+                {% endif %}</a>
+            </h4>
         </div>
 
     </header>
@@ -152,6 +162,8 @@
     {% block page_header %}
     {% endblock %}
 
+    <div class="row mobile-space d-lg-none d-block"></div>
+
     {% block content %}
     {% endblock %}
 
@@ -159,32 +171,30 @@
 
     <footer class="text-center text-lg-start text-white">
         <!-- Social media footer -->
-        <section class="d-flex justify-content-between p-4 footer-socials">
-            <!-- Left -->
+        <section class="footer-socials">
             <div class="me-5">
                 <span>Follow me on Social Media:</span>
             </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-                <a href="https://www.youtube.com/user/officialcharlixcx" target="_blank" class="text-white me-4">
+            <div class="">
+                <a href="https://www.youtube.com/user/officialcharlixcx" target="_blank" style="text-decoration:none"
+                    class="footer-links me-4 p-2">
                     <i class="fa-brands fa-youtube"></i>
                 </a>
-                <a href="https://www.facebook.com/CharliXCX" target="_blank" class="text-white me-4">
+                <a href="https://www.facebook.com/CharliXCX/" target="_blank" style="text-decoration:none"
+                    class="footer-links me-4 p-2">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://twitter.com/charli_xcx" class="text-white me-4">
+                <a href="https://twitter.com/charli_xcx" target="_blank" style="text-decoration:none"
+                    class="footer-links me-4 p-2">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.instagram.com/charli_xcx/" target="_blank" class="text-white me-4">
+                <a href="https://www.instagram.com/charli_xcx/" target="_blank" style="text-decoration:none"
+                    class="footer-links me-4 p-2">
                     <i class="fab fa-instagram"></i>
                 </a>
 
             </div>
-            <!-- Right -->
         </section>
-        <!-- Section: Social media -->
 
         <!-- Section: Links  -->
         <section class="">
@@ -198,7 +208,8 @@
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
                             style="width: 60px; background-color: #ff389c; height: 2px" />
                         <p>
-                            The official Charli XCX store - shop all of the latest Charli XCX merchandise including Charli XCX tees, Charli XCX jumpers, Charli XCX accessories and much more! 
+                            The official Charli XCX store - shop all of the latest Charli XCX merchandise including
+                            Charli XCX tees, Charli XCX jumpers, Charli XCX accessories and much more!
                         </p>
                     </div>
                     <!----- Merchandise Links Footer------>
@@ -211,15 +222,17 @@
                                 Merchandise</a>
                         </p>
                         <p>
-                            <a class="footer-links" href="{% url 'merchandise' %}?category="
+                            <a class="footer-links"
+                                href="{% url 'merchandise' %}?category=shirts,hoodies,scarves,jumpers"
                                 class="text-white">Apparel</a>
                         </p>
                         <p>
-                            <a class="footer-links" href="{% url 'merchandise' %}?category="
+                            <a class="footer-links"
+                                href="{% url 'merchandise' %}?category=keychains,chains,stickers,phone_cases,bags"
                                 class="text-white">Accessories</a>
                         </p>
                         <p>
-                            <a class="footer-links" href="{% url 'merchandise' %}?category="
+                            <a class="footer-links" href="{% url 'merchandise' %}?category=cds,vinyls,posters"
                                 class="text-white">Music</a>
                         </p>
                     </div>
@@ -249,11 +262,11 @@
                         <h6 class="text-uppercase fw-bold">Contact via Atlantic Records</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
                             style="width: 60px; background-color: #ff389c; height: 2px" />
-                        <p class="text-center"><i class="fas fa-home mr-3"></i>
+                        <p><i class="fas fa-home mr-3"></i>
                             Various Artists Management<br>
-                            37 Lonsdale Road<br>
-                            London NW6 6RA<br>
-                            UK </p>
+                            &nbsp;&nbsp;&nbsp;37 Lonsdale Road<br>
+                            &nbsp;&nbsp;&nbsp;London NW6 6RA<br>
+                            &nbsp;&nbsp; UK </p>
                         <p><i class="fas fa-envelope mr-3"></i> contact@atlanticrecords.com</p>
                         <p><i class="fas fa-phone mr-3"></i> +44(0)207 372 6075 </p>
                     </div>

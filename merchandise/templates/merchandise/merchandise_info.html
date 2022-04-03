@@ -42,6 +42,15 @@
                 <!------- Merchandise Content -------->
 
                 <p class="text-content mt-3">{{ merch.description|safe }}</p>
+                {% if merch.is_limited %}
+                <p>
+                    {% if merch.limited_number == 0 %}
+                        <span style="color: red;">Sorry! Sold out!</span>
+                    {% else %}
+                        Only <span style="color: green;">{{merch.limited_number}}</span> in stock!
+                    {% endif %}
+                </p>
+                {% endif %}
                 <!------- Merchandise form -------->
 
                 <form class="form" action="{% url 'add_to_bag' merch.id %}" method="POST">
@@ -74,7 +83,13 @@
                                         </button>
                                     </div>
                                     <input class="form-control qty_input" type="number" name="quantity" value="1"
-                                        min="1" max="99" data-item_id="{{ merch.id }}" id="id_qty_{{ merch.id }}">
+                                        min="1" data-item_id="{{ merch.id }}" id="id_qty_{{ merch.id }}"
+                                        {% if merch.is_limited %}
+                                            max="1"
+                                        {% else %}
+                                            max="99"
+                                        {% endif %}
+                                    >
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-black rounded-0"
                                             data-item_id="{{ merch.id }}" id="increment-qty_{{ merch.id }}">

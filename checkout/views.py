@@ -145,6 +145,13 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+    order_products = OrderLineItem.objects.filter(order=order)
+
+    for merch in order_products:
+        find_product = Merch.objects.get(product_name=merch.product)
+        if find_product.is_limited:
+            find_product.limited_number -= merch.quantity
+            find_product.save()
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)

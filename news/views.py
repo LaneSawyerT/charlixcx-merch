@@ -7,7 +7,13 @@ from profiles.models import UserProfile
 
 # Create your views here.
 class NewsPostList(generic.ListView):
+    
     model = NewsPost
+
+    # if 'filter' in request.GET:
+    #     filter_key = request.GET['filter']
+    #     queryset = NewsPost.objects.filter(status=1, category=filter_key).order_by('-created_on')
+    # else:
     queryset = NewsPost.objects.filter(status=1).order_by('-created_on')
     template_name = "news.html"
     paginate_by = 4

@@ -19,27 +19,32 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">My Profile</h2>
+            <h2 class="logo-font text-center mb-4">My Profile</h2>
             <hr>
         </div>
     </div>
     <div class="row">
         <p class="text-muted">Liked News Posts</p>
-        <div class="row">
-            <!------- Liked News Items -------->
-            <div class="col-sm-3">
-                {% for like in likes %}
-                <div class="card mb-4">
+    </div>
+    <div class="row">
+        <!------- Liked News Items -------->
+        <div class="col-sm-3 text-center">
+            {% for like in likes %}
+            <div class="card mb-4">
+                <a href="{{ news_post.slug }}">
                     <h2> {{ like }}</h2>
-                    <img src='{{ like.featured_image.url }}' />
+                </a>
+                <img src='{{ like.featured_image.url }}' />
+                <div class="text-content">
+                    <p>{{ like.content|truncatechars:30| safe }}<a href=""> Read More>></a></p>
                 </div>
-                {% endfor%}
             </div>
+            {% endfor%}
         </div>
     </div>
     <div class="row">
         <!------- Profile info -------->
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 profile-data">
             <p class="text-muted">Default Delivery Information</p>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
@@ -88,9 +93,10 @@
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
-    {% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}
