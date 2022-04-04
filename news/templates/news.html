@@ -4,96 +4,137 @@
 
 <div class="container-fluid">
     <div class="row news-header">
+        <div class="row mobile-space d-lg-none d-block"></div>
+
         <div class="col-12 text-center mt-3">
             <h2 class="logo-font">News:</h2>
             <hr class="w-50 mb-1">
         </div>
-        <!---- News Tags Sorting---->
-        <div class="row mt-1 mb-2">
-            <div class="col-12 col-md-6 my-auto d-flex justify-content-center justify-content-end">
-                <div class="sort-select-wrapper w-50">
-                    <select id="sort-selector"
-                        class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
-                        </option>
-                        <option value="new_music" {% if current_sorting == 'product_price-asc' %}selected{% endif %}>New
-                            Music
-                        </option>
-                        <option value="letters" {% if current_sorting == 'product_price-desc' %}selected{% endif %}>
-                            Letters
-                        </option>
-                        <option value="tours" {% if current_sorting == 'product_name-asc' %}selected{% endif %}>
-                            Tours</option>
-                        <option value="charts" {% if current_sorting == 'product_name-desc' %}selected{% endif %}>Charts
-                        </option>
-                        <option value="interviews" {% if current_sorting == 'category_asc' %}selected{% endif %}>
-                            Interviews</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 order-md-first">
-                <p class="text-muted mt-3 text-center text-md-left">
-                    <span class="small"><a href="{% url 'news' %}">News Posts</a> | </span>
-                </p>
-            </div>
-        </div>
     </div>
-
-    <!------- News Posts -------->
-    <div class="col-12 mt-3 left ">
-        <div class="row justify-content-center">
-            {% for news_post in object_list %}
-            <div class="col-md-6">
-                <div class="card h-100 border-0">
-                    <div class="card-body">
-                        <a class="text-center" href="{{ news_post.slug }}">
-                            <h2 class="card-title">{{ news_post.post_title }}</h2>
-                            <hr class=" justify-content-center"
-                            style="width: 60px; background-color: #ff389c; height: 2px" />
-                        </a>
-
-                        <div class="text-center">
-                            {% if "placeholder" in news_post.featured_image.url %}
-                            {% else %}
-                            <img class="justify-content-center" height="200px" width="200px" src=" {{ news_post.featured_image.url }}"
-                                alt="Picture of {{ news_post.post_title }}">
-                            {% endif %}
-                        </div>
-                        <div class="text-content">
-                            <p>{{ news_post.content|truncatechars:130| safe }} </p>
-                            <p><a class="read-more" href="{{ news_post.slug }}"> Read More>></a></p>
-                        </div>
-                        <p>Author: {{ news_post.author }}</p>
-                        <hr />
-                        <p class="card-text text-muted h6">{{ news_post.created_on}}
-                            {% if news_post.category %}
-                            <p class="small mt-1 mb-0">
-                                <a class="text-muted" href="{% url 'news' %}?category={{ news_post.category }}">
-                                    <i class="fas fa-tag mr-1"></i>{{ news_post.category.friendly_name }}
-                                </a>
-                            </p>
-                            {% endif %}
+    <!---- News Tags Sorting---->
+    <div class="row">
+        <div class="merchandise-container col-10 offset-1">
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper">
+                        <select id="filter-selector"
+                            class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                            </option>
+                            <option value="new_music" {% if current_sorting == 'new_music' %}selected{% endif %}>New
+                                Music
+                            </option>
+                            <option value="letters" {% if current_sorting == 'letters' %}selected{% endif %}>
+                                Letters
+                            </option>
+                            <option value="tours" {% if current_sorting == 'tours' %}selected{% endif %}>
+                                Tours</option>
+                            <option value="charts" {% if current_sorting == 'charts' %}selected{% endif %}>Charts
+                            </option>
+                            <option value="interviews" {% if current_sorting == 'interviews' %}selected{% endif %}>
+                                Interviews</option>
+                        </select>
                     </div>
                 </div>
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-center text-md-left">
+                        <span class="small"><a href="{% url 'news' %}">News Posts</a> | </span>
+                    </p>
+                </div>
             </div>
-            {% if forloop.counter|divisibleby:1 %}
+
+        <!------- News Posts -------->
+        <div class="col-12 mt-3 left ">
+            <div class="row justify-content-center">
+                {% for news_post in object_list %}
+                <div class="col-md-6">
+                    <div class="card h-100 border-0">
+                        <div class="card-body">
+                            <a class="text-center" href="{{ news_post.slug }}">
+                                <h2 class="card-title">{{ news_post.post_title }}</h2>
+                                <hr class=" justify-content-center"
+                                    style="width: 60px; background-color: #ff389c; height: 2px" />
+                            </a>
+
+                            <div class="text-center">
+                                {% if "placeholder" in news_post.featured_image.url %}
+                                {% else %}
+                                <img class="" height="200px" width="200px" src=" {{ news_post.featured_image.url }}"
+                                    alt="Picture of {{ news_post.post_title }}">
+                                {% endif %}
+                            </div>
+                            <div class="text-content">
+                                <p>{{ news_post.content|truncatechars:130| safe }} </p>
+                                <p><a class="read-more" href="{{ news_post.slug }}"> Read More>></a></p>
+                            </div>
+                            <p>Author: {{ news_post.author }}</p>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ news_post.created_on}}
+                                {% if news_post.category %}
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-muted" href="{% url 'news' %}?category={{ news_post.category }}">
+                                        <i class="fas fa-tag mr-1"></i>{{ news_post.category.friendly_name }}
+                                    </a>
+                                </p>
+                                {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
+            </div>
+            <div class="row justify-content-center">
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
-        <div class="row justify-content-center">
-            {% endif %}
-            {% endfor %}
-        </div>
+        {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+
+<script type="text/javascript">
+    $('#filter-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            currentUrl.searchParams.set("filter", selectedVal);
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("filter");
+            window.location.replace(currentUrl);
+        }
+    });
+
+    var currentFilter = new URL(window.location).split("=")[1];
+
+    for (option of document.getElementsByTagName("option")) {
+
+        if (option.value === currentFilter) {
+            option.setAttribute("selected", "selected");
+        }
+
+    }
+</script>
 {% endblock %}

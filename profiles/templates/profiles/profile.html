@@ -31,7 +31,7 @@
         <div class="col-sm-3 text-center">
             {% for like in likes %}
             <div class="card mb-4">
-                <a href="{{ news_post.slug }}">
+                <a href="{{ like.slug }}">
                     <h2> {{ like }}</h2>
                 </a>
                 <img src='{{ like.featured_image.url }}' />

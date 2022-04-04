@@ -10,13 +10,18 @@ class NewsPostList(generic.ListView):
     
     model = NewsPost
 
-    # if 'filter' in request.GET:
-    #     filter_key = request.GET['filter']
-    #     queryset = NewsPost.objects.filter(status=1, category=filter_key).order_by('-created_on')
-    # else:
-    queryset = NewsPost.objects.filter(status=1).order_by('-created_on')
+    queryset = None
+
     template_name = "news.html"
     paginate_by = 4
+
+    def get_queryset(self, **kwargs):
+        if self.request.GET.get('filter'):
+            category = get_object_or_404(Category, tag_name=self.request.GET.get('filter'))
+            self.queryset = NewsPost.objects.filter(status=1, category=category.id).order_by("-created_on")
+        else:
+            self.queryset = NewsPost.objects.filter(status=1).order_by("-created_on")
+        return self.queryset
 
 
 class PostDetail(View):
