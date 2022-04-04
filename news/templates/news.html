@@ -48,6 +48,8 @@
                     <div class="card-body">
                         <a class="text-center" href="{{ news_post.slug }}">
                             <h2 class="card-title">{{ news_post.post_title }}</h2>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto justify-content-center"
+                            style="width: 60px; background-color: #ff389c; height: 2px" />
                         </a>
 
                         <div class="text-center">
@@ -58,8 +60,8 @@
                             {% endif %}
                         </div>
                         <div class="text-content">
-                            <p>{{ news_post.content|truncatechars:130| safe }} <a class="read-more"
-                                    href="{{ news_post.slug }}"> Read More>></a></p>
+                            <p>{{ news_post.content|truncatechars:130| safe }} </p>
+                            <p><a class="read-more" href="{{ news_post.slug }}"> Read More>></a></p>
                         </div>
                         <p>Author: {{ news_post.author }}</p>
                         <hr />

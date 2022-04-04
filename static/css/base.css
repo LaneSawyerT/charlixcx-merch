@@ -41,14 +41,22 @@ footer {
 
 .crash-image-tablet{
     background: url("/media/crash.jpg") no-repeat center center;
-    background-size: cover;
-    margin-top: 18%;
+    background-size: contain;
+    margin-top: -13%;
 }
 
 .crash-image-mobile{
-    background: url("/media/crash.jpg") no-repeat center center;
-    background-size: contain;
-    margin-top: -24%;
+    background: url("/media/crash-mobile.jpg") no-repeat center center;
+    background-size: cover;
+    margin-top: -30%;
+    min-height: 50vh;
+}
+
+.crash-image-mobile-bottom{
+    background: url("/media/crash-mobile-bottom.png") no-repeat center center;
+    background-size: cover;
+    margin-top: -45%;
+    z-index: 2;
 }
 
 .banner-text {
@@ -388,13 +396,17 @@ a:hover {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
+	color: #001011;
+    background-color: #ff389c;
+    border-color: #ff389c;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #ff389c; /* text-info */
+}
+
+.form-control{
+    border: 1px solid #222;
 }
 
 /* fixed top navbar only on medium and up */
