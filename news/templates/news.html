@@ -48,14 +48,14 @@
                     <div class="card-body">
                         <a class="text-center" href="{{ news_post.slug }}">
                             <h2 class="card-title">{{ news_post.post_title }}</h2>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto justify-content-center"
+                            <hr class=" justify-content-center"
                             style="width: 60px; background-color: #ff389c; height: 2px" />
                         </a>
 
                         <div class="text-center">
                             {% if "placeholder" in news_post.featured_image.url %}
                             {% else %}
-                            <img class="" height="200px" width="200px" src=" {{ news_post.featured_image.url }}"
+                            <img class="justify-content-center" height="200px" width="200px" src=" {{ news_post.featured_image.url }}"
                                 alt="Picture of {{ news_post.post_title }}">
                             {% endif %}
                         </div>

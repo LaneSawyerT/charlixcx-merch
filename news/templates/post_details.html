@@ -1,30 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="post_header">
+<h1 class="post-title text-center text-black">{{ post.post_title }}</h1>
+<hr class="justify-content-center"
+style="width: 60px; background-color: #ff389c; height: 2px" />
 
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.featured_image.url %}
-                <img class="news_image" src="{{ MEDIA_URL }}not_available.png" width="100%">
-                {% else %}
-                <img class="news_image" src=" {{ post.featured_image.url }}" width="100%">
-                {% endif %}
-            </div>            
-            <div class="col-md-6 masthead-text">
-                <!------- News Post details -------->
-                <h1 class="post-title">{{ post.title }}</h1>
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-
-        </div>
-    </div>
 </div>
-
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
+                <div class="mx-auto d-block col-md-6 justify-content-center">
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img class="news_image " src="{{ MEDIA_URL }}not_available.png" width="100%">
+                    {% else %}
+                    <img class="news_image " src=" {{ post.featured_image.url }}" width="100%">
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                    <!------- News Post details -------->
+                    <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                </div>
+
                 <!-- News post content -->
                 <div class="text-content card-text ">
                     {{ post.content | safe }}

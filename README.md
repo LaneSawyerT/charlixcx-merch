@@ -1,108 +1,359 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Charli XCX - Merchandise
 
-Welcome LaneSawyerT,
+Here is a link to the live project. (https://charlixcx-merch.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This website was created for Milestone 4 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Image showing the website displayed on different screen sizes]()
 
-## Gitpod Reminders
+## Contents 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [User Experience (UX)](#user-experience-ux)
+   * [Strategy](#strategy)
+   * [User Stories](#user-stories) 
+   * [Scope](#scope)
+      + [Current Features](#current-features)
+      + [Features to implement in the future](#features-to-implement-in-the-future)
+   * [Structure](#structure)
+   * [Skeleton](#skeleton)
+   * [Surface](#surface)
+     + [Colour Scheme](#colour-scheme)
+     + [Typography](#typography)
+     + [Imagery](#imagery)
+     + [Design Choices](#design-choices)
+- [Technologies](#technologies)
+   * [Languages used](#languages-used)
+   * [Frameworks, Libraries & Programs Used](#frameworks-libraries-and-programs-used)
 
-`python3 -m http.server`
+   - [Challenges](#challenges)
 
-A blue button should appear to click: _Make Public_,
+- [Testing](#testing)
+   
+- [Deployment](#deployment)
+   * [Creation](#creation)
+   * [Forking](#forking)
+   * [Clone](#clone)
+   * [Setting up AWS](#setting-up-aws)
+   * [Setting Up Stripe](#setting-up-stripe)
+   * [Setting Up Project](#setting-up-project)
+   * [Heroku Deployment](#heroku-deployment)
 
-Another blue button should appear to click: _Open Browser_.
+- [Credits](#credits)
+   * [Code](#code)
+   * [Content](#content)
+   * [Media](#media)
+   * [Acknowledgements](#acknowledgements)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## User Experience (UX)
 
-A blue button should appear to click: _Make Public_,
+   ### Strategy 
+   - User goals 
+     * I want to be able to buy different types of merchandise from this artist.
+     * I want to buy physical music from this artist.
+     * I want to check the updates for this artist.
+     * I would like it to be easily navigable on any screen size and remember my purchase details.
 
-Another blue button should appear to click: _Open Browser_.
+   - Site owner/ business goals
+     * As the site owner, I would like to prioritise sales of music and apparel.
+     * As the site owner, I would like to be able to update customers/fans on the artist.
+     * As the site owner, I would want it to be easily navigable so that customer feel welcomed back.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+   ### User Stories
 
-To log into the Heroku toolbelt CLI:
+   - #### Unregistered Visitor
+        1. As an unregistered visitor, I want to be able to add products to my bag.
+        2. As an unregistered visitor, I want to be able to view my bag.
+        3. As an unregistered visitor, I want to be able to edit my bag.
+        4. As an unregistered visitor, I want to be able to checkout and pay.
+        5. As an unregistered visitor, I want to see an order confirmation.
+        6. As an unregistered visitor, I expect the site to look good on my mobile device.
+        7. As an unregistered visitor, I want to easily Search the website for products
+        8. As an unregistered visitor, I want to be able to easily register.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+   - #### First Time Visitor (in addition to above)
+        1. As a first time visitor, I want to easily understand the main purpose of the site.
+        2. As a first time visitor, I want to be able to intuitively use the site.
+        3. As a first time visitor, I expect to see an attractive, visually appealing site.
+        4. As a first time visitor, I expect an accessible site.
+        5. As a first time visitor, I expect the site to look good on my mobile device.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+   - #### Registered Returning Visitor Goals
+        1. As a returning visitor, I want to be able to see previous order history.
+        2. As a returning visitor, I want to be able to purchase more merchandise with previous details saved.
+        3. As a returning visitor, I want to look at new updates or news from this artist
+        4. As a returning visitor, I want to be able to save my details or liked news posts.
+        5. As a returning visitor, I want to search for specific merchandise.
+      
+   - #### Registered Frequent Visitor Goals
+        1. As a frequent visitor, I want to be able to easily look at my liked news posts.
+        2. As a frequent visitor, I want to be able to edit my profile information.
+        3. As a frequent visitor, I want to be able to see my order history.
+        4. As a frequent visitor, I want to be able to search for merchandise.
 
-------
+   - #### Superuser goals
+        1. As superuser, I want to be able to add, delete or edit merchandise.
+        2. As superuser, I want to be able to add updates about the artist.
+        3. As superuser, I want to be able to make another user admin.
+        4. As superuser, I want to be check availability of limited products.
+        5. As superuser, I want to be able to keep customers up to date on the artists via news posts.
+        6. As superuser, I don’t want users to be able to order product if there is none left in stock.
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+   ### Scope
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+   Within project conception, a list of features were compiled, these were the scored 
+   between 1 & 5 for importance and feasibility/ viability which then decided which features 
+   could be included for initial launch.    
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+   #### Current features 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+-   Responsive on all device sizes
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+-   Accessible 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+-   Easy to navigate (Single use learning)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+-   Interactive elements
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+-   Social Links 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+-   Contact form prefills the personal information for logged in users.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+-   Changing nav menu and footer links and buttons in depending on the users log in status, admin status and what event if any they have added.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+-   Able to search products for song, artist or album name.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+-   Can search events for name of event, location or details.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+-   'Back to top' footer link on each page, saves users from having to scroll up to Nav bar especially on mobile devices.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+-   Logged in users can add events to event board.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+-   Logged in user can save their addresses and default address, pre-fills Checkout form
 
-------
+-   User can edit events on event board that they themselves added. 
 
-## FAQ about the uptime script
+-   User can edit their own profile information
 
-**Why have you added this script?**
+-   Admin users can add, edit and delete any merchandise.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+-   When product stock quantity is 0, add to cart buttons are not available and will display 'Out of Stock'.
 
-**How will this affect me?**
+-   Confirmation email on registration and on successful purchase.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+   #### Features to implement in the future
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Structure
 
-**So….?**
+-   Created a database schema using [GraphizOnline](https://dreampuf.github.io/GraphvizOnline/), as per Emmets     instructions on [slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1642276160282900) see [here](/) to view better.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+     ![image showing database schema]()
 
-**Can I opt out?**
+### Skeleton 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Wireframes were created on Balsamiq (see links below)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* [Mobile](/)
+* [Tablet](/)
+* [Desktop](/)
 
-**Anything more?**
+The finished project does differ from the wireframes. The profile sections that I initially planned, I re-thought as I think users prefer to see the information displayed rather than having to click into everythng separately. 
+In addition the carousels looked different than I invisioned so didn't need a row each which is why you get 3 on a row for bigger screens, 2 on medium and 1 on tablet. Other than that it's just tweaks.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Surface
 
----
+ -  #### Colour Scheme
+    
+    
+    ![image showing color scheme]()
+        
+-   #### Typography
+         
+    Used [Google Fonts](https://fonts.google.com/) to import the fonts used for this site.
+      
+-   #### Imagery
 
-Happy coding!
+
+
+-   #### Design Choices
+
+    
+## Technologies 
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks, Libraries and Programs Used
+
+1. [Bootstrap v4.6.0](https://getbootstrap.com/docs/4.6.0/getting-started/introduction/)
+    - Bootstrap was used for the initial layout and styling before customising it.
+2. [Google Fonts](https://fonts.google.com/)
+    - Google fonts were used to import the Tangerine and Gentium Book Basic. 
+3. [Font Awesome](https://fontawesome.com/)
+    - The icons used throughout.
+4. [Git](https://git-scm.com/)
+    - Version control.
+5. [GitHub](https://github.com/)
+    - For storing project.
+6. [Gitpod](https://www.gitpod.io/)
+    - Used for editing my code.
+7. [Balsamiq](https://balsamiq.com/)
+    - Wireframe creation
+8. [Am I responsive](http://ami.responsivedesign.is/)
+    - This was used to generate the image at the top of this README.
+9. [Chrome devtools](https://developer.chrome.com/docs/devtools/)
+    - This was used massively throughout development to troubleshoot, try out changes before 
+   changing code, to test responsiveness and for testing performance of the final site with lighthouse. 
+10. [jQuery](https://jquery.com/)
+    - Required for some of the bootstrap elements such as collapsibles, modal and tooltips.
+11. [Heroku](https://dashboard.heroku.com/apps)
+    - For deploying the application
+12. [Postgres](https://www.postgresql.org/)
+    - Database used for our data
+13. [Django](https://www.djangoproject.com/)
+    - Framework for building applications.
+14. [Stripe](https://stripe.com/gb)
+    - Used for our online payment system
+15. [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
+    - Used to generate secret key
+16. [GraphizOnline](https://dreampuf.github.io/GraphvizOnline/)
+    - Used to create the database schema.
+17. [convertingcolors.com](https://convertingcolors.com/color-bucket.html)
+    - For making my colour palette picture
+
+## Challenges 
+
+
+## Testing
+
+Testing and results can be found [here](TESTING.md)
+
+## Deployment
+
+ - ### Creation 
+
+    I created this repository by:<br>
+    (a) Logging into Github and clicked the green new button.<br>
+    (b) This took me to the page below. I selected the code institute template, input a repository name and clicked the green create repository button.<br>
+
+    ![image showing green new button]()
+    ![Image showing the create repository page]()
+
+    (c) Opened new repository and clicked green Gitpod button to create a workspace in Gitpod for editing.
+
+  - ### Forking
+    (a) To fork my project sign in to Github and go to my [repository]()<br>
+    (b) Above and to the right of the settings there are three options and the far right one says Fork, select this.<br>
+    (c) The fork is now in your repositories.
+
+    ![Image showing fork button]()
+
+  - ### Clone
+    To clone my project sign in to Github and go to my [repository](https://github.com/natalie-kate/music_to_my_ears)<br>
+    See [Setting Up Stripe](#setting-up-stripe), [Setting Up Project](#setting-up-app), [Cloudinary]()
+    and [Heroku Deployment](#heroku-deploment) for more information about what will be required to run Music to my ears.
+
+    *  Clone using command line 
+        +  Next to the green Gitpod button is a button that says code, select this. There is a few options as to how you 
+        would like to clone, if you choose https, SSH or Github CLI, select the clipboard icon to copy the URL.
+        +  In your workspace that you've created, in the terminal , type git clone, paste the URL and enter.
+
+        ![Image showing the cloning options](docs/readme-assets/readme-images/clone.png)
+
+    *  Desktop Github
+        + If you choose to clone by selecting open with desktop Github, it will guide you through the clone with prompts.<br>
+
+    For more information or troubleshooting see the Github documentation 
+    [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#about-cloning-a-repository)
+
+- ### Setting Up Project
+   
+    - Install requirements in terminal using pip3 install, see requirements below. If you have cloned my project you can use   pip3 install -r requirements.txt which will install everything for you.
+    
+      ![Image showing the requirements]()
+
+    - Create a SECRET_KEY for django to use. I used [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) for this. My settings.py file is set up to collect keys from the environment so name your variables accordingly. In github you go into settings from your dashboard and then variables. And add the following. You can complete the rest when you go through these sections. DEVELOPMENT value is set to True. Scope you can set to your repository name meaning its only accessible by that project or you can set it to */* meaning all your repositories can access them. 
+
+        ![Image showing the github variable set up]()
+
+    - Ensure you have requirements.txt file and Procfile. These are required by Heroku so ensure these are pushed to github prior to deployment. Ensure all requirements are saved by using pip3 freeze > requirements.txt
+
+    - If using in development you will need to Run migrations usimg command python3 manage.py makemigrations and then python3 manage.py migrate. To create a superuser in the terminal to get access to admin panel, use command python3 manage.py createsuperuser and fill in details required.
+
+
+- ### Setting up Stripe
+    - Register with stripe [here](https://stripe.com/gb) if you don't already have an account. Didn't activate account as will be using free tier.
+    - In dashboard from main menu and then select developers and then API keys. Here you will get the publishable and secret keys. These shouldn't go into version control so add them as variables in your github environment for development and in Config Vars in Heroku if you are deploying this project. 
+
+        ![Image showing the Developer menu]()
+
+    - We are also using webhooks in this project and so below API keys in the menu there is a Webhooks option, click into it and then select add endpoint.
+
+        ![Image showing add endpoint button]()
+    
+    - You'll be asked for a url, this is your github workspace url with /checkout/wh/ added onto the end. When you deploy to Heroko you'll want to create an endpoint for it also, again with the /checkout/wh/ at the end. You then need to select events you want webhooks for. You can select all events but we only really need payment_intent.succeeded and payment_intent.payment_failed. as this is what we have wrote webhandlers for. Select Add Events and then Add Endpoint.
+
+        ![Image showing add endpoint url]()
+        ![Image showing add webhook events]()
+
+    - Now in your new webhook, reveal Signing secret, copy this and this is the value for the STRIPE_WH_SECRET variable in your github settings. When you make a new endpoint for Heroku you will get a another Signing Secret to use.
+
+        ![Image showing Reveal signing secret link]()
+
+
+- ### Heroku deployment
+    - Log in to Heroku, click 'New' and select 'Create New App'. In window give the app a name and choose region closest to you and then click 'Create App'. Then in Resources under Add-ons, select Heroku Postgres.
+
+       ![Image showing the Heroku menu]()
+       ![Image showing the Add-on section]()
+
+    - In new app page select settings from menu, click reveal config vars and complete the following, see Stripe and AWS sections for where to get their secret key values. DATABASE_URL will have been pre-filled when you selected Postgres. USE_AWS value is True for when we have set up AWS. SECRET_KEY was generated as before with Django Secret Key generator.
+      
+      ![Image showing the config vars required]()
+
+    - Next select 'Deploy' from menu, three options of deployment are available. If you select Heroku Git, it gives you step by step of what you need to do.
+
+      ![Image showing the deployment options]()
+
+    - I chose to use Github, so you have to search and connect to your github repository. 
+    
+    - Click enable automatic deployment, below that in manual deploy section, you can pick and deploy a branch to ensure everything is set up correctly. 
+
+      ![Image showing manual deployment]()
+    
+    - You will now need to migrate and create superuser as above in Setting Up Project section.
+
+## Credits
+
+### Code
+
+-   Code Institutes walk through project [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/250e2c2b8e43cccb56b4721cd8a8bd4de6686546)
+-   [Bootstrap4](https://getbootstrap.com/docs/4.1/getting-started/introduction/): Bootstrap Library used for the layout and styling and modals.
+
+### Content
+
+-   Content was created by Natalie Alexander.
+    
+-   README and TESTING layout and content from my MS1 which took inspirations and ideas from these excellent examples
+    * [Code institute](https://github.com/Code-Institute-Solutions/SampleREADME)
+
+### Media
+-   Most of the product images were taken of my own collection and a friends who very kindly sent them to me.
+
+-   Some images and info were from wikipedia as I wanted to showcase more than two genres which seemed to be the majority of the products we had.
+
+-   * [CharliXCX](https://charlixcx.com/): Index/home banner image. And Merchandise items. 
+    * [Red Bubble](https://www.redbubble.com/shop/?query=charli%20xcx&ref=search_box): More Merchandise items from here as well. 
+
+ 
+### Acknowledgements
+
+-   Code Institute for Boutique Ado walk through project and automated testing course material. Used the videos quite bit to get me started.
+-   My mentor Matthew Rudge for his time and feedback.
+-   The slack community.

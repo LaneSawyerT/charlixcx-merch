@@ -28,8 +28,8 @@ class NewsPost(models.Model):
     Where the news post is created
     """
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    post_title = models.CharField(max_length=40, unique=True)
-    slug = models.SlugField(max_length=40, unique=True)
+    post_title = models.CharField(max_length=70, unique=True)
+    slug = models.SlugField(max_length=70, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="news_posts"
     )

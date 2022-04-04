@@ -237,9 +237,11 @@ a.category-badge > span.badge:hover {
 }
 
 .news_image {
-    width: 300px;
-    height: 300px;
-}
+    height: 400px;
+    width: 600px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;  } 
 
 .masthead {
     margin-top: 10%;
@@ -248,6 +250,7 @@ a.category-badge > span.badge:hover {
     display: inline-block;
     width: 100%;
 }
+
 
 /* Merch */
 .merch-header{
@@ -279,7 +282,10 @@ a:hover {
 .toast-capper {
     height: 2px;
 }
-
+.post_header{
+    margin-top:15%;
+    color: #000;
+}
 
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
