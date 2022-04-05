@@ -26,21 +26,21 @@
                     <div class="sort-select-wrapper">
                         <select id="filter-selector"
                             class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                            <option value="reset">Sort by...
                             </option>
-                            <option value="new_music" {% if current_sorting == 'new_music' %}selected{% endif %}>New
+                            <option value="new_music">New
                                 Music
                             </option>
-                            <option value="letters" {% if current_sorting == 'letters' %}selected{% endif %}>
+                            <option value="letters">
                                 Letters
                             </option>
-                            <option value="tours" {% if current_sorting == 'tours' %}selected{% endif %}>
+                            <option value="tours">
                                 Tours</option>
-                            <option value="charts" {% if current_sorting == 'charts' %}selected{% endif %}>Charts
+                            <option value="charts">Charts
                             </option>
-                            <option value="interviews" {% if current_sorting == 'interviews' %}selected{% endif %}>
+                            <option value="interviews">
                                 Interviews</option>
-                            <option value="performances" {% if current_sorting == 'performances' %}selected{% endif %}>
+                            <option value="performances">
                                 Performances</option>
                         </select>
                     </div>
@@ -141,7 +141,13 @@
         }
     });
 
-    var currentFilter = new URL(window.location).split("=")[1];
+    var currentUrl = new URL(window.location);
+    console.log(currentUrl.searchParams);
+    if (currentUrl.searchParams.get("filter")) {
+        currentFilter = currentUrl.searchParams.get("filter");
+    } else {
+        currentFilter = "reset";
+    }
 
     for (option of document.getElementsByTagName("option")) {
 
