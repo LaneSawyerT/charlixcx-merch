@@ -115,7 +115,7 @@ footer {
     cursor: pointer;
 }
 
-.buy-now-button {
+.add-now-button {
     background: black;
     color: white;
     min-width: 130px;
@@ -125,6 +125,16 @@ footer {
     border-color: #aab7c4;
 }
 
+.buy-now-button {
+    background: black;
+    color: white;
+    min-width: 120px;
+    height: 60px;
+    position: absolute;
+    margin-top: 28%;
+    margin-right: 15%;
+    border-color: #aab7c4;
+}
 
 /* Banner */
 

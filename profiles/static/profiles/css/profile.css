@@ -19,3 +19,8 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.profile_post_image {
+    max-height: 150px;
+    object-fit: cover;
+}

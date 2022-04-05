@@ -147,35 +147,31 @@ This website was created for Milestone 4
 
 ### Structure
 
--   Created a database schema using [GraphizOnline](https://dreampuf.github.io/GraphvizOnline/), as per Emmets     instructions on [slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1642276160282900) see [here](/) to view better.
-
-     ![image showing database schema]()
+-   Created a database schema using [GraphizOnline](https://dreampuf.github.io/GraphvizOnline/), as per Emmets     instructions on [slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1642276160282900) see [here](/media/readme/db.png) to view better.
 
 ### Skeleton 
 
 Wireframes were created on Balsamiq (see links below)
 
-* [Mobile](/)
-* [Tablet](/)
-* [Desktop](/)
+* [Mobile](/media/readme/mobilewf.png)
+* [Tablet](/media/readme/tabletwf.png)
+* [Desktop](/media/readme/desktopwf.png)
 
-The finished project does differ from the wireframes. The profile sections that I initially planned, I re-thought as I think users prefer to see the information displayed rather than having to click into everythng separately. 
-In addition the carousels looked different than I invisioned so didn't need a row each which is why you get 3 on a row for bigger screens, 2 on medium and 1 on tablet. Other than that it's just tweaks.
+The finished project does differ a bit from the wireframes. There are less merchandise products per row on the page and I've changed the footer to better match the useful links. Also, on the profile page there is now the added functionality of seeing which news posts you like and going back to them. And on the news page, it is now more centered than left/right which is how I initially thought it would play out in the draft of wireframes.
 
 ### Surface
 
  -  #### Colour Scheme
     
     
-    ![image showing color scheme]()
+    ![image showing color scheme](/media/readme/db.png)
         
 -   #### Typography
          
-    Used [Google Fonts](https://fonts.google.com/) to import the fonts used for this site.
+    Used [Google Fonts](https://fonts.google.com/) to import the fonts used for this site. Specifically the 'Bebas Neue' font used throughout.
       
 -   #### Imagery
-
-
+    The images I've chosen were taken from Charli Xcx's current website and RedBubble. The news posts images were from the respective articles or performances, etc. I tried to pick the styles and images that coincide with the release of the new album and focus on promotion of that while also enhancing the style of the website. 
 
 -   #### Design Choices
 
