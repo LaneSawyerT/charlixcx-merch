@@ -28,18 +28,20 @@
     </div>
     <div class="row">
         <!------- Liked News Items -------->
-        <div class="col-sm-3 text-center">
-            {% for like in likes %}
-            <div class="card mb-4">
-                <a href="{{ like.slug }}">
-                    <h2> {{ like }}</h2>
-                </a>
-                <img src='{{ like.featured_image.url }}' />
-                <div class="text-content">
-                    <p>{{ like.content|truncatechars:30| safe }}<a href=""> Read More>></a></p>
+        <div class="col-12">
+            <div class="col-sm-3 text-center">
+                {% for like in likes %}
+                <div class="card mb-4">
+                    <a href="">
+                        <h4> {{ like|truncatechars:30 }}</h4>
+                    </a>
+                    <img src='{{ like.featured_image.url }}' />
+                    <div class="text-content">
+                        <p>{{ like.content|truncatechars:30| safe }}<a href=""> Read More>></a></p>
+                    </div>
                 </div>
+                {% endfor%}
             </div>
-            {% endfor%}
         </div>
     </div>
     <div class="row">
