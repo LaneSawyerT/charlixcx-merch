@@ -62,7 +62,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0"
+                                            <button class="decrement-qty d-none d-sm-block btn btn-sm btn-black rounded-0"
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
@@ -73,7 +73,7 @@
                                             name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                             data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                            <button class="increment-qty d-none d-sm-block btn btn-sm btn-black rounded-0"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
@@ -113,7 +113,7 @@
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                     <div class="form-row justify-content-end">
                                         <input type="submit" class="btn rounded-0  mt-5"
-                                            value="You can donate €1.00 to help refugees from Ukraine! Click here!">
+                                            value="Donate €1.00 to help refugees from Ukraine! Click here!">
                                     </div>
                                 </form>
                                 {% else %}
@@ -126,13 +126,13 @@
                         <!------- Checkout button/ Continue Shopping -------->
 
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'merchandise' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <a href="{% url 'merchandise' %}" class="btn btn-outline-black mt-2 rounded-0 btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Continue Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                            <a href="{% url 'checkout' %}" class="btn btn-black mt-2 rounded-0 btn-lg">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
