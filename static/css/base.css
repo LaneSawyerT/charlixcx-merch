@@ -39,41 +39,7 @@ footer {
     color: #ff389c;
 }
 
-/* Banner Image */
-
-.crash-image-desktop {
-    background: url("/media/crash.jpg") no-repeat center center;
-    background-size: cover;
-    color: #ff389c;
-    font-family: 'Bebas Neue', cursive;
-    height: 70vh;
-}
-
-.crash-image-tablet {
-    background: url("/media/crash.jpg") no-repeat center center;
-    background-size: contain;
-    margin-top: -7%;
-    min-height: 330px;
-    background-color: #000;
-}
-
-.crash-image-mobile {
-    margin-top: 125px;
-    background: url("/media/crash-mobile.jpg") no-repeat center center;
-    background-size: cover;
-    margin-top: -10%;
-    min-height: 358px;
-    width: 100%;
-    
-}
-
-.crash-image-mobile-bottom {
-    background: url("/media/crash-mobile-bottom.png") no-repeat center center;
-    background-size: contain;
-    margin-top: -41%;
-    min-height: 350px;
-    width: 100%;
-}
+/* Banner Image Styling */
 
 .mobile-image {
     background-color: #000;

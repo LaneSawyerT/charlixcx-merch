@@ -23,7 +23,7 @@
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="" alt="{{ merch.product_name }}">
+                    <img class="card-img-top img-fluid" src="{% static 'images/not_available.png' %}" alt="{{ merch.product_name }}">
                 </a>
                 {% endif %}
             </div>

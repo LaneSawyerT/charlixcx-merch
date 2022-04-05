@@ -42,6 +42,43 @@
     {% block extra_js %}
     {% endblock %}
 
+    <style>
+        .crash-image-desktop {
+            background: url("{% static 'images/crash.jpg' %}") no-repeat center center;
+            background-size: cover;
+            color: #ff389c;
+            font-family: 'Bebas Neue', cursive;
+            height: 70vh;
+        }
+
+        .crash-image-tablet {
+            background: url("{% static 'images/crash.jpg' %}") no-repeat center center;
+            background-size: contain;
+            margin-top: -7%;
+            min-height: 330px;
+            background-color: #000;
+        }
+
+        .crash-image-mobile {
+            margin-top: 125px;
+            background: url("{% static 'images/crash-mobile.jpg' %}") no-repeat center center;
+            background-size: cover;
+            margin-top: -10%;
+            min-height: 358px;
+            width: 100%;
+            
+        }
+
+        .crash-image-mobile-bottom {
+            background: url("{% static 'images/crash-mobile-bottom.jpg' %}") no-repeat center center;
+            background-size: contain;
+            margin-top: -41%;
+            min-height: 350px;
+            width: 100%;
+        }
+
+    </style>
+
     <title>Charli Xcx</title>
 </head>
 <!-- Header with Logo/Search bar/Account/Shopping Bag-->
