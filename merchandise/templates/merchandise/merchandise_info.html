@@ -108,7 +108,9 @@
                                 </span>
                                 <span class="text-uppercase">Continue Shopping</span>
                             </a>
+                            {% if merch.limited_number != 0 %}
                             <input type="submit" class="btn btn-black rounded-0 add-now-button text-uppercase mt-5 {% for item in bag_items %}{% if item.product == merch and merch.is_limited %}d-none{% endif %}{% endfor %} ml-3" value="Add to Bag">
+                            {% endif %}
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}

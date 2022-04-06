@@ -214,213 +214,155 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 ## Testing User Stories 
 
    - #### Unregistered Visitor
-        1. As an unregistered visitor, I want to be able to add products to my cart
-           On the landing page, the spinning vinyl, call to action button opens shop page, aswell as there being a 
-           shop link in the nav menu.
+        1.  As an unregistered visitor, I want to be able to add products to my bag.
+            Below you can see a button on the selected merchandise for the customer to add to their bag.
 
-             ![Image showing landing page call to action button](/docs/readme-assets/testing_images/shop_btn.png)
-             ![Image showing Shop nav link](/docs/readme-assets/testing_images/nav.png)
+             ![Image showing add to bag](/media/readme/userstories/add.png)
 
-        2. As an unregistered visitor, I want to be able to view my cart
-           The basket is on the top right of the page. When there are items the number is in 
-           brackets beside the basket. In addition when a product is added to the basket, success 
+        2. As an unregistered visitor, I want to be able to view my bag.
+           The bag is on the top right of the page. When there are items the number is in 
+           brackets beside the bag. In addition when a product is added to the basket, success 
            message contains a link to view basket.
 
-             ![Image showing basket in nav menu](/docs/readme-assets/testing_images/basket.png)
-             ![Image showing Success message view basket link](/docs/readme-assets/testing_images/view_basket.png)
+             ![Image showing bag in nav menu](/media/readme/bagtotal.png)
+             ![Image showing Success message view bag link](/media/readme/userstories/addtobag.png)
 
-        3. As an unregistered visitor, I want to be able to edit my cart
-           In view basket page there are Update and Delete links that open collapsibles.
+        3. As an unregistered visitor, I want to be able to edit my bag.
+           In view bag page there are Update and Delete buttons
 
-             ![Image showing edit and delete links in basket](/docs/readme-assets/testing_images/edit_basket.png)
+             ![Image showing edit and delete links in bag](/media/readme/userstories/editbag.png)
 
-        4. As an unregistered visitor, I want to be able to checkout
-           In view basket page and in success message upon adding a product there is a checkout 
+        4. As an unregistered visitor, I want to be able to checkout and pay.
+           In view bag page and in success message upon adding a product there is a checkout 
            button that takes user to checkout page.
 
-             ![Image showing checkout button in basket](/docs/readme-assets/testing_images/checkout_btn.png)
-             ![Image showing Success message checkout button](/docs/readme-assets/testing_images/message_checkout.png)
+             ![Image showing checkout button on bag page](/media/readme/userstories/checkoutpage.png)
+             ![Image showing Success message checkout button](/media/readme/userstories/checkoutbag.png)
 
-        5. As an unregistered visitor, I want to see an order confirmation
-           When an order is put through, the checkout success page renders and the user will recieve 
-           a confirmation email.
+        5. As an unregistered visitor, I want to see an order confirmation.
+           When an order is put through, the checkout success page renders.
 
-             ![Image showing checkout success page](/docs/readme-assets/testing_images/order_confirm.png)
-             ![Image showing order confirmation email](/docs/readme-assets/testing_images/order_email.png)
+             ![Image showing checkout success page](/media/readme/userstories/orderconfirm.png)
 
         6. As an unregistered visitor, I expect the site to look good on my mobile device.
            The site was designed with mobile first in mind
 
              ![Image showing mobile home page](/docs/readme-assets/testing_images/home.png)
-             ![Image showing mobile nav menu page](/docs/readme-assets/testing_images/mobile_nav.png)
-             ![Image showing mobile shop page](/docs/readme-assets/testing_images/shop.png)
-             ![Image showing mobile product details page](/docs/readme-assets/testing_images/details.png)
-             ![Image showing mobile basket page](/docs/readme-assets/testing_images/basket_mobile.png)
-             ![Image showing checkout page](/docs/readme-assets/testing_images/checkout.png)
-             ![Image showing mobile contact page](/docs/readme-assets/testing_images/contact.png)
 
-        7. As an unregistered visitor, I want to easily search the vinyls.
-           The Shop page has the products grouped in genres of which the user can use the arrows to browse through.
-           The "Browse Genre" heading above each carousel is a link so that the user can see all products of a genre at once.
-           There is also a view all products link and a search box.
+        7. As an unregistered visitor, I want to easily Search the website for products
            
-             ![Image showing browse genre, see all and search box](/docs/readme-assets/testing_images/browse_products.png)
+             ![Image showing  search box](/media/readme/userstories/searchbar.png)
+
+        8. As an unregistered visitor, I want to be able to easily register.
+            Register link is in main nav menu and in footer links for non registered users. In addition the 
+            banner for non signed in users is a link to register page.
+
+              ![Image unregistered footer](/media/readme/userstories/unregisteredfooter.png)
+
+            ![Image unregistered my account nav](/media/readme/userstories/unregisteredhome.png)
+
+
 
    - #### First Time Visitor (in addition to above)
         1. As a first time visitor, I want to easily understand the main purpose of the site.
-           The landing page has a call to action button that says "Shop Vinyl", there is also an about 
-           section that explains what the site is for.
+           The landing page has a photo of the cover of Charli XCX's new album and the footer has a brief description about her.
             
-             ![Image showing call of action and about section](/docs/readme-assets/testing_images/about.png)
+             ![Image home page](/media/readme/userstories/homepage.png)
+             ![Image about footter](/media/readme/userstories/aboutfooter.png)
 
         2. As a first time visitor, I want to be able to intuitively use the site.
            I have kept the basket on the top right, the logo on the top left, the nav menu at the top 
            and other links in the footer where a user will expect to find them. This aids with single user
            learning and therefore intuitive use.
 
-             ![Image showing nav bar](/docs/readme-assets/testing_images/nav_bar.png)
-             ![Image showing footer links](/docs/readme-assets/testing_images/links.png)
+             ![Image showing nav bar](/media/readme/userstories/navbar.png)
+             ![Image showing footer links](/media/readme/userstories/footerlinks.png)
 
         3. As a first time visitor, I expect to see an attractive, visually appealing site.
-           Main landing page image colours are carried through the site for uniformity. The three images 
-           used at top of each page are all music themed but prevent the user getting bored of the same image.
+           Main landing page image colours are carried through the site for uniformity to give a sleek design.
 
-             ![Image showing shop page image](/docs/readme-assets/testing_images/shop_pic.png) 
-             ![Image showing profile page image](/docs/readme-assets/testing_images/profile_pic.png)
-             ![Image showing contact page image](/docs/readme-assets/testing_images/contact_pic.png)
+             ![Image showing home page image](/media/readme/userstories/homepage.png) 
+             ![Image showing profile page image](/media/readme/userstories/profilepage.png)
+             ![Image showing news page image](/media/readme/userstories/newspage.png)
 
         4. As a first time visitor, I expect an accessible site.
            All links are aria labelled, all images have alternative text and the colour contrast ratio passes 
-           lighthouse testing.
+           lighthouse testing in the devtools.
 
-        5. As a first time visitor, I want to easily register.
-           Register link is in main nav menu and in footer links for non registered users. In addition the 
-           banner for non signed in users is a link to register page.
+        5. As a first time visitor, I expect the site to look good on my mobile device. This was designed with a mobile first point of view.
 
-            ![Image showing main nav link to register](/docs/readme-assets/testing_images/mobile_nav.png)
-            ![Image showing sign in link in the footer](/docs/readme-assets/testing_images/links.png)
-            ![Image showing banner registration link](/docs/readme-assets/testing_images/banner.png)
+            ![Image mobile design](/docs/readme-assets/testing_images/mobile_nav.png)
 
    - #### Registered Returning Visitor Goals
-        1. As a returning visitor, I want to be able to view and add to the event board.
-           Link in the main nav menu and in the banner for logged in users. On the event page there 
-           is an Add event button at the top, this takes the user to the add event page.
+        1. As a returning visitor, I want to be able to see previous order history. Users can make their way to their profile and see that their order history is there.
 
-             ![Image showing event link in main nav menu](/docs/readme-assets/testing_images/event_link.png)
-             ![Image showing add event form](/docs/readme-assets/testing_images/add_event_form.png)
-             ![Image showing banner event page link](/docs/readme-assets/testing_images/event_banner.png)
-             ![Image showing add event button](/docs/readme-assets/testing_images/add_event.png)
+             ![Image showing orderhistory](/media/readme/userstories/orderhistory.png)
 
-        2. As a returning visitor, I want to follow on social media so I can hear of any new products.
-           In the footer of each page are Social media links.
+        2. As a returning visitor, I want to be able to purchase more merchandise with previous details saved.
+           The user has their information saved to make their next purchases easier.
 
-             ![Image showing social links](/docs/readme-assets/testing_images/social.png)
+             ![Image showing details on profile](/media/readme/userstories/detailsprofile.png)
            
-        3. As a returning visitor, I want to be able to change my password.
-           On the users profile page, under My Account section is a link to change password.
+        3. As a returning visitor, I want to look at new updates or news from this artist. The User can make their way to the news site and see just that.
 
-             ![Image showing change password link](/docs/readme-assets/testing_images/my_account.png)
-             ![Image showing change password page](/docs/readme-assets/testing_images/change_password.png)
+             ![Image showing news page](/media/readme/userstories/newspage.png)
            
-        4. As a returning visitor, I want to be able to save my details
-           User can save personal information via a button on the profile page that open a collapsible section
-           or when placing an order via the save my information link.
+        4. As a returning visitor, I want to be able to save my details or liked news posts.
+           User can save their favorite news stories on the post details page and it will show up in their profile page.
 
-             ![Image showing edit info button](/docs/readme-assets/testing_images/edit_info.png)
-             ![Image showing save info checkbox](/docs/readme-assets/testing_images/save_info.png)
+             ![Image showing liked posts](/media/readme/userstories/likednews.png)
 
-        5. As a returning visitor, I want to get feedback so I know that something has went through.
-           Whenever as user adds, adjusts or deletes an item from their basket a pop up message appears. 
-           In addition the user recieves emails upon registration, placing an order and submitting a contact form.
-           Upon submitting an order the user is also taken to an order confirmation page. 
+        5. As a returning visitor, I want to search for specific merchandise. Users have the functionality to search for the specific product they are looking for.
             
-             ![Image showing registration email](/docs/readme-assets/testing_images/registration_email.png)
-             ![Image showing order confirmation email](/docs/readme-assets/testing_images/order_email.png)
-             ![Image showing contact email](/docs/readme-assets/testing_images/contact_email.png)
-             ![Image showing success message](/docs/readme-assets/testing_images/view_basket.png)
-             ![Image showing order confirmation page](/docs/readme-assets/testing_images/order_confirm.png)
+             ![Image showing searchbar](/media/readme/userstories/searchbar.png)
              
    - #### Registered Frequent Visitor Goals
-        1. As a frequent visitor, I want to be able to edit an event I’ve added to the event board.
-           On the event page, if a user created an event they will have the option to edit or delete the event.
+        1. As a frequent visitor, I want to be able to easily look at my liked news posts. Users can look back at their profile page to see the liked news post.
 
-             ![Image showing edit event link](/docs/readme-assets/testing_images/edit_event.png)
-             ![Image showing edit event form](/docs/readme-assets/testing_images/edit_event_form.png)
+             ![Image showing liked posts](/media/readme/userstories/likednews.png)
 
-        2. As a frequent visitor, I want to be able to contact the owner.
-           In the main nav there is a link to the contact page which take user to the contact form
-           to complete. If user has completed their personal information, this will prefill the relevant fields.
+        2. As a frequent visitor, I want to be able to edit my profile information.
+           In the profile page there is a a form. If user has completed their personal information, this will prefill the relevant fields.
 
-             ![Image showing contact us nav link](/docs/readme-assets/testing_images/nav.png)
-             ![Image showing contact form](/docs/readme-assets/testing_images/contact_form.png)
+             ![Image showing details on profile](/media/readme/userstories/detailsprofile.png)
 
-        3. As a frequent visitor, I want to be able to edit my profile information.
-           On profile page, there is a My Info section with an edit info button,
-           this opens the edit info section.
+        3. As a frequent visitor, I want to be able to see my order history.
+           On profile page, there is a spot to see all the previously processed orders.
 
-             ![Image showing edit info button](/docs/readme-assets/testing_images/edit_info.png)
-             ![Image showing edit info section](/docs/readme-assets/testing_images/edit_info_form.png)
+             ![Image showing orderhistory](/media/readme/userstories/orderhistory.png)
             
-        4. As a frequent visitor, I want to be able to delete my account
-           On profile page, under My account section is a delete account link,this opens a delete confirmation prior to deleting.
+        4. As a frequent visitor, I want to be able to search for merchandise. Users have the functionality to search for the specific product they are looking for.
 
-             ![Image showing delete account link](/docs/readme-assets/testing_images/delete.png)
+             ![Image showing searchbar](/media/readme/userstories/searchbar.png)
 
-        5. As a frequent visitor, I want to be able to see my order history.
-           On users profile page there is a My Orders section, this lists date and truncated order number, this is a link
-           which opens up original order confirmation page. Order table is horizontally scrollable on smaller screens.
-
-             ![Image showing past order link](/docs/readme-assets/testing_images/my_orders.png)
-             ![Image showing order information](/docs/readme-assets/testing_images/view_order.png)
-
-        6. As a frequent visitor, I don't want to have never ending scrolling up or down.
-           Every page has a back to top link in the footer.
-
-             ![Image showing back to top link](/docs/readme-assets/testing_images/links.png)
-
-        7. As a frequent visitor, I want to be able to search for events.
-           On the event page at the top is a search bar. The user can search for name, location or details.
-
-             ![Image showing events search bar](/docs/readme-assets/testing_images/search.png)
 
    - #### Superuser goals
-        1. As superuser, I want to be able to add, delete or edit a product.
-           In nav menu for superusers there is an Add Product link which opens the add vinyl page.
+        1. As superuser, I want to be able to add or edit merchandise.
+           On the Add merchandise page the admin can upload the relevant details for their merchandise.
 
-             ![Image showing add vinyl link in main menu](/docs/readme-assets/testing_images/add_vinyl.png)
-             ![Image showing add vinyl form](/docs/readme-assets/testing_images/add_vinyl_form.png)
+             ![Image showing add merchandise](/media/readme/userstories/adminmerchandise.png)
 
-        2. As superuser, I want to be able to add a genre.
+        2. As superuser, I want to be able to add updates about the artist.
            In superusers main menu is a link to the admin panel where they can add new genres.
 
-             ![Image showing add genre in admin panel](/docs/readme-assets/testing_images/add_genre.png)
+             ![Image showing posts in admin panel](/media/readme/userstories/adminnews.png)
+             ![Image showing add post in admin panel](/media/readme/userstories/adminlistpost.png)
              
-        3. As superuser, I want to be able to delete or edit an event on the event board
-           Superuser can edit or delete any event on the event board. This can be via the edit and delete links 
-           at the bottom of each event card or via the admin panel.
+        3. As superuser, I want to be able to make another user admin. Admins can chose in the adminal panel under User which one to pick and click the labels for superuser.
 
-             ![Image showing delete user in admin panel](/docs/readme-assets/testing_images/delete_event.png)
-             ![Image showing delete event in admin panel](/docs/readme-assets/testing_images/admin_delete.png)
-             ![Image showing edit event in admin panel](/docs/readme-assets/testing_images/admin_edit.png)
+             ![Image showing admin superuser](/media/readme/userstories/superuser.png)
              
-        4. As superuser, I want to be able to delete a user.
-           User can enter admin through the Admin link on their main menu. In the admin panel they can select
-           users from the left hand side, select the user they want to delete and in drop down choose delete selected users. Alternatively they can inactivate the user via the permissions option when they open the users record.
+        4. As superuser, I want to be check availability of limited products. Users can go onto the merchandise page and click on edit and see the limited number of the limitted product on display and update accordingly. 
 
-             ![Image showing delete user in admin panel](/docs/readme-assets/testing_images/delete_user.png)
-             ![Image showing inactivate user in admin panel](/docs/readme-assets/testing_images/inactivate_user.png)
+             ![Image showing delete user in admin panel](/media/readme/userstories/limitednum.png)
 
-        5. As superuser, I want to be able to make another user an admin.
-           As above but for inactivating a user but under permissions select staff and superuser permissions.
-
-             ![Image showing admin permissisons in admin panel](/docs/readme-assets/testing_images/admin.png)
+        5. As superuser, I want to be able to keep customers up to date on the artists via news posts. The superuser can create many different posts about the artist in the news post admin page.
 
         6. As superuser, I don’t want users to be able to order product if there is none left in stock.
-           If product has a stock_quantity of 0, the add to basket buttons are inactivated. In addition if user 
-           adds to basket but then someone purchases the last one prior to them checking out, it'll be removed from basket and they will be informed. 
+           If product has a stock_quantity of 0, the add to basket buttons are inactivated and on the main merchandise page to say that it is soldout. 
 
-            ![Image showing out of stock message with no add to basket button available](/docs/readme-assets/testing_images/out_of_stock.png)
-            ![Image showing error message due to stock no longer available](/docs/readme-assets/testing_images/error.png)
+            ![Image showing out of stock message with no add to basket button available](/media/readme/userstories/nobutton.png)
+            ![Image showing out of stock message on merchandise page](/media/readme/userstories/soldout.png)
        
       
 ## Manual Testing
@@ -543,4 +485,3 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
 
    ### Existing
-     

@@ -91,7 +91,7 @@ This website was created for Milestone 4
         4. As a frequent visitor, I want to be able to search for merchandise.
 
    - #### Superuser goals
-        1. As superuser, I want to be able to add, delete or edit merchandise.
+        1. As superuser, I want to be able to add or edit merchandise.
         2. As superuser, I want to be able to add updates about the artist.
         3. As superuser, I want to be able to make another user admin.
         4. As superuser, I want to be check availability of limited products.
@@ -133,15 +133,21 @@ This website was created for Milestone 4
 
 -   User can edit their own profile information
 
--   Admin users can add, edit and delete any merchandise.
+-   Admin users can add, edit and delete any merchandise. 
+
+-   Admin can reduce or replenish the limited stock items.
 
 -   Limited products can only be purchased once per order.
+
+-   Limited products will show that there is 'limited stock' on merchandise page.
 
 -   When product stock quantity is 0, add to cart buttons are not available and will display 'Out of Stock'.
 
 -   Confirmation email on registration and on successful purchase.
 
 -   Users can click on the heart button and it will be saved to their profile as news posts they loved so they can go back to them.
+
+-   Users can donate 1€ to help Ukrainan refugees on the shopping page.
 
    #### Features to implement in the future
 
