@@ -24,7 +24,7 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
-    <!------- Sort By Bar -------->
+    <!-- Sort By Bar -->
     <div class="row">
         <div class="col-10 offset-1">
             <div class="row mt-1 mb-2">
@@ -51,7 +51,7 @@
                         </select>
                     </div>
                 </div>
-                <!------- Number of Merchandise Items -------->
+                <!-- Number of Merchandise Items -->
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -62,7 +62,7 @@
                     </p>
                 </div>
             </div>
-            <!------- Merchandise Items -------->
+            <!-- Merchandise Items -->
             <div class="row">
                 {% for merchandise in merch %}
                 {% if not merchandise.product_hidden %}
@@ -81,14 +81,14 @@
                         {% endif %}
                         <!--Limited quantity-->
                         <div class="card-body pb-0">
-                            <a href="{% url 'merchandise_info' merchandise.id %}"" class="
-                                mb-0">{{ merchandise.product_name }}
-                                {% if merchandise.is_limited %} 
-                                   {% if merchandise.limited_number == 0 %}
-                                     (Sold out!)
-                                    {% else %}
-                                     (Limited quantity)
-                                    {% endif %}
+                            <a href="{% url 'merchandise_info' merchandise.id %}"
+                                class="mb-0">{{ merchandise.product_name }}
+                                {% if merchandise.is_limited %}
+                                {% if merchandise.limited_number == 0 %}
+                                (Sold out!)
+                                {% else %}
+                                (Limited quantity)
+                                {% endif %}
                                 {% endif %}
                             </a>
                         </div>
@@ -105,7 +105,7 @@
                                         </a>
                                     </p>
                                     {% endif %}
-                                    <!------- Admin Merchandise Usage -------->
+                                    <!-- Admin Merchandise Usage -->
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_merchandise' merchandise.id %}">Edit</a> |
