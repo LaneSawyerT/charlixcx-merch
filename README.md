@@ -141,6 +141,8 @@ This website was created for Milestone 4
 
 -   Confirmation email on registration and on successful purchase.
 
+-   Users can click on the heart button and it will be saved to their profile as news posts they loved so they can go back to them.
+
    #### Features to implement in the future
 
 -  Add a wishlist on users profile that the can add products to.
@@ -241,7 +243,7 @@ The finished project does differ a bit from the wireframes. There are less merch
 
     -   Styling the AllAuth templates were more difficult than first thought. While most look like buttons, they range from buttons, inputs, links and input tags. And I wanted to change their initial style of black to pink and have it maintain that throughout site. That was more difficult than thought but besides one a tag on the sign out page there shouldn't be any changed in color that are very drastic.
     
-    -   While getting the news posts to show up wasn't difficult.. Trying to categorise them and have them as clickable links(similar to how it was done in merchandise) was tricky. Since on the Django blog 'generic' views are used it made it harder to specifiy and call it. But thankfully with the help of my mentor we used the function 'get_queryset' to be able to sort through the news post by their category/tag.
+    -   Trying to create categories for news posts, which the user can click on as filters(similar to how its done in the Merchandise), was difficult. This is due to the difficulties of accessing the request method in a Django generic view. A lot of developers seem to have the same issue, but we were able to override the get_queryset method to achieve this.
 
     -   I had trouble fully understanding how to link in django with the templating. But thankfully with the help of a mentor I was able to link up the site between different Django apps. 
 
