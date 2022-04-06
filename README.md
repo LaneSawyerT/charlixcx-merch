@@ -249,7 +249,7 @@ The finished project does differ a bit from the wireframes. There are less merch
 
     -   Had issues with deploying properly to Heroku. I apparently had a space at the end of one of the Config vars but it took me a while before I figured that out. 
 
-    -   Originally had uploaded media in the media folder to be displayed on the site but it was having issues properly coming across on the deployed Heroku. So I ended up moving those images onto cloudinary as well. 
+    -   Had issues with the local images display so moved them onto Cloudinary and call them on the base.html in the script for css.
 
 
 
