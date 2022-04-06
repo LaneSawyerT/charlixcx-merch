@@ -17,74 +17,59 @@
 
 ## Automated Testing
 
-The W3C Markup Validator and W3C CSS Validator were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator and W3C CSS Validator were used to validate all the main pages of the project to ensure there were no syntax errors in the project. All had the same or similar warnings about using too many '---' for comments in the code which I use to help my eyesite. Also, I added the type/Javascript to scripts thinking it would help organise the code a bit better and I didn't give h2 to the foot sections because of size issues I wanted to do.
 
 -   ## [W3C Markup Validator](https://validator.w3.org/) 
 
     - index.html
-       * No errors found.
 
-       ![index.html validation](/docs/readme-assets/testing_images/home-html.png)
-
-    - base.html
-       * No errors found.
-
-       ![shop.html validation](/docs/readme-assets/testing_images/shop-html.png)
+       ![index.html validation](/media/html/indexhtml.png)
 
     - merchandise.html
-       * Added the missing closing span tag and removed duplicate class attribute.
 
-       ![product.html validation](/docs/readme-assets/testing_images/product-html.png)
-  
+       ![merchandise.html validation](/media/html/merchhtml.png)
+
     - merchandise_info.html
-       * No errors found.
 
-       ![basket.html validation](/docs/readme-assets/testing_images/basket-html.png)
+       ![merchandise_info.html validation](/merch/html/merchinfohtml.png)
+  
+    - add_merch.html
 
-    - checkout.html
-       * Had put for="#idname" in label element like you do for collapsibles, removed the hashtag.
+       ![add_merch.html validation](/media/html/addmerchhtml.png)
 
-       ![checkout.html validation](/docs/readme-assets/testing_images/checkout-html.png)
+    - Edit_merch.html
 
-    - checkoutsuccess.html
-       * No errors found.
+       ![Edit_merch.html validation](/media/html/editmerchhtml.png)
 
-       ![checkoutsuccess.html validation](/docs/readme-assets/testing_images/checkoutsuccess-html.png)
+    - Bag.html
 
-    - add-merchandise.html
-       * 
+       ![Bag.html validation](/media/html/baghtml.png)
 
-       ![add-vinyl.html validation](/docs/readme-assets/testing_images/addproduct-html.png)
+    - Profile.html
 
-    - edit-merchandise.html
-       * Same issues as add-vinyl bar the genre issue, clearly had copied and pasted.
+       ![Profile.html validation](/media/html/profilehtml.png)
 
-       ![edit-vinyl.html validation](/docs/readme-assets/testing_images/editvinyl-html.png)
+    - Checkout.html
+
+       ![checkout.html validation](/media/html/checkouthtml.png)
 
     - news.html
-       * Duplicate class element on each event card due to the for loop. Had introduced these duplicates when I was adding mr-2 class to everything, didn't obviously look for an existing class attribute first.
 
-       ![event.html validation](/docs/readme-assets/testing_images/event-html.png)
+       ![event.html validation](/media/html/news.png)
       
-    - post_detail.html
-       * No errors found
+    - Checkout_success.html
 
-       ![add-event.html validation](/docs/readme-assets/testing_images/addevent-html.png)
+       ![Checkout_success.html validation](/media/html/checkoutsuccesshtml.png)
 
-    - bag.html
-       * No errors found
-
-       ![edit-event.html validation](/docs/readme-assets/testing_images/editevent-html.png)
-
-    - profile.html
-       * Duplicate class as above. In forms.py my add placeholders section wasn't indented properly and therefore the "if field != 'default_country':" wasn't actually doing anything.
-
-       ![profile.html validation](/docs/readme-assets/testing_images/profile-html.png)
+    - Post detail.html
+       ![Post detail.html validation]()
 
 
 -   ## [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+
+   -  Thankfully passed the CSS without a problem.
     
-       ![css validation](/docs/readme-assets/testing_images/css.png)
+       ![css validation](/media/readme/css.png)
    
 
 -   ## [JSHint JavaScript Validator](https://jshint.com/) 
@@ -93,11 +78,10 @@ The W3C Markup Validator and W3C CSS Validator were used to validate every page 
     - stripe_elements.js
        * Same as base.js plus stripe variable required by stripe so justified.
 
-       ![stripe_elements.js validation](/docs/readme-assets/testing_images/stripejs.png)
-       ![stripe_elements.js validation](/docs/readme-assets/testing_images/stripejs2.png)
+       ![stripe_elements.js validation](/media/readme/stripejs.png)
 
-    - ratings.js
-       * Same as base.js
+    - quantity_input_element.html 
+       ![quantity.js validation](/media/readme/quantityjs.png)
 
 
 -   ## [Pep8 validation](http://pep8online.com/) 
