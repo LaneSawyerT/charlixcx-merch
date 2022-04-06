@@ -1,3 +1,4 @@
+<ul class="d-block d-lg-none">
 <li class="list-inline-item">
     <!------- Tablet/Mobile Search -------->
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
@@ -25,14 +26,14 @@
 </li>
 <!------- Tablet/Mobile My Account -------->
 <li class="list-inline-item dropdown">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options-mobile" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center head-links">
             <div><i class="fas fa-user fa-lg"></i></div>
             <p class="my-0 ">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0" aria-labelledby="user-options-mobile">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <a href="{% url 'add_merchandise' %}" class="dropdown-item">Product Management</a>
@@ -61,3 +62,4 @@
         </div>
     </a>
 </li>
+</ul>

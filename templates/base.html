@@ -20,33 +20,6 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
-
-    {% block extra_css %}
-    {% endblock %}
-
-    <!-- JS Links -->
-    {% block corejs %}
-    <script src="https://kit.fontawesome.com/36d7c75807.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-    <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
-
-    {% block extra_js %}
-    {% endblock %}
-
-    <title>Charli Xcx</title>
-</head>
-<!-- Header with Logo/Search bar/Account/Shopping Bag-->
-
-<body>
     <style>
         .crash-image-desktop {
             background: url("{% static 'images/crash.jpg' %}") no-repeat center center;
@@ -82,12 +55,43 @@
             width: 100%;
         }
 
+        .logo-image {
+            width: 50%;
+        }
+
     </style>
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    <!-- JS Links -->
+    {% block corejs %}
+    <script src="https://kit.fontawesome.com/36d7c75807.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Charli Xcx</title>
+</head>
+<!-- Header with Logo/Search bar/Account/Shopping Bag-->
+
+<body>
     <header class="main-header container-fluid fixed-top">
         <div class="row">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <img src="{% static 'images/logo.jpg' %}" width='50%' />
+                    <img src="{% static 'images/logo.jpg' %}" class="logo-image" alt="Charli XCX Logo" />
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-none d-lg-block">
@@ -258,18 +262,18 @@
                                 Merchandise</a>
                         </p>
                         <p>
-                            <a class="footer-links"
+                            <a class="footer-links text-white"
                                 href="{% url 'merchandise' %}?category=shirts,hoodies,scarves,jumpers"
-                                class="text-white">Apparel</a>
+                                >Apparel</a>
                         </p>
                         <p>
-                            <a class="footer-links"
+                            <a class="footer-links text-white"
                                 href="{% url 'merchandise' %}?category=keychains,chains,stickers,phone_cases,bags"
-                                class="text-white">Accessories</a>
+                                >Accessories</a>
                         </p>
                         <p>
-                            <a class="footer-links" href="{% url 'merchandise' %}?category=cds,vinyls,posters"
-                                class="text-white">Music</a>
+                            <a class="footer-links text-white" href="{% url 'merchandise' %}?category=cds,vinyls,posters"
+                                >Music</a>
                         </p>
                     </div>
                     <!----- Link footers------>
@@ -289,7 +293,7 @@
                             {% endif %}
                         </p>
                         <p>
-                            <a class="footer-links" href="{% url 'news' %}" class="text-white">News</a>
+                            <a class="footer-links text-white" href="{% url 'news' %}">News</a>
                         </p>
                     </div>
                     <!----- Contact Footer------>
