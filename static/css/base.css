@@ -39,21 +39,6 @@ footer {
     color: #ff389c;
 }
 
-/* Banner Image */
-
-.mobile-image {
-    background-color: #000;
-}
-
-.banner-text {
-    margin-left: 60%;
-    margin-top: 25%;
-}
-
-.mobile-nav {
-    color: #FFFFFC;
-}
-
 /* Buttons */
 .btn:hover,
 .btn:active,
@@ -74,6 +59,11 @@ footer {
     color: white;
     z-index: 0 !important;
 }
+
+.btn-like {
+    background-color: #000;
+}
+
 
 .btt-link,
 .update-link,
@@ -125,8 +115,28 @@ footer {
     margin-top: 20%;
 }
 
+/* Banner Image */
+
+.mobile-image {
+    background-color: #000;
+}
+
+.banner-text {
+    margin-left: 60%;
+    margin-top: 25%;
+}
+
+.mobile-nav {
+    color: #FFFFFC;
+}
+
 /* Header */
 /* Some code taken from Bulma */
+.main-header {
+    z-index: 2;
+    background: white;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -218,10 +228,6 @@ footer {
     z-index: -1;
 }
 
-.main-header {
-    z-index: 2;
-    background: white;
-}
 
 /* Categories*/
 a.category-badge>span.badge:hover {
@@ -248,6 +254,10 @@ a.category-badge>span.badge:hover {
     position: relative;
     display: inline-block;
     width: 100%;
+}
+
+.like-form {
+    color: #ff389c;
 }
 
 /*Youtube video sizing from techStacker*/
@@ -377,7 +387,7 @@ a:hover {
 }
 
 
-/* Media Queries */
+/* Media Queries & AllAuth */
 
 /* Slightly larger container on desktop */
 @media (min-width: 1200px) {
@@ -386,7 +396,7 @@ a:hover {
     }
 }
 
-/* Allauth form formatting */
+/* Allauth form formatting and styles */
 
 .sign-up {
     margin-top: 10%;

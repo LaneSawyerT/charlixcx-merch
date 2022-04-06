@@ -19,12 +19,12 @@
     <div class="row mt-3">
         <div class="col">
             <hr>
-            <h2 class="logo-font text-center mb-4">My Profile</h2>
+            <h2 class="logo-font text-center mb-4">{{ user }}'s Profile</h2>
             <hr>
         </div>
     </div>
     <div class="row">
-        <p class="text-muted">Liked News Posts</p>
+        <p class="text-muted ml-3">Liked News Posts</p>
     </div>
     <div class="row">
         <!------- Liked News Items -------->
@@ -34,7 +34,7 @@
                 <div class="col-sm-3 text-center">
                     <div class="card mb-4">
                         <a href="/news/{{ like.slug }}">
-                            <h4> {{ like|truncatechars:25 }}</h4>
+                            <h4> {{ like|truncatechars:20 }}</h4>
                         </a>
                         <img src='{{ like.featured_image.url }}' class="profile_post_image" />
                         <div class="text-content">
