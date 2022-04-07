@@ -4,7 +4,7 @@ Here is a link to the live project. (https://charlixcx-merch.herokuapp.com/)
 
 This website was created for Milestone 4 
 
-![Image showing the website displayed on different screen sizes]()
+![Image showing the website displayed on different screen sizes](/media/readme/responsive.png)
 
 ![link to testing.md](TESTING.md)
 
