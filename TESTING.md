@@ -150,8 +150,8 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
         2. As an unregistered visitor, I want to be able to view my bag.
            The bag is on the top right of the page. When there are items the number is in 
-           brackets beside the bag. In addition when a product is added to the basket, success 
-           message contains a link to view basket.
+           brackets beside the bag. In addition when a product is added to the bag, success 
+           message contains a link to view bag.
 
              ![Image showing bag in nav menu](/media/readme/bagtotal.png)
              ![Image showing Success message view bag link](/media/readme/userstories/addtobag.png)
@@ -200,7 +200,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
              ![Image about footter](/media/readme/userstories/aboutfooter.png)
 
         2. As a first time visitor, I want to be able to intuitively use the site.
-           I have kept the basket on the top right, the logo on the top left, the nav menu at the top 
+           I have kept the bag on the top right, the logo on the top left, the nav menu at the top 
            and other links in the footer where a user will expect to find them. This aids with single user
            learning and therefore intuitive use.
 
@@ -291,9 +291,9 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
         5. As superuser, I want to be able to keep customers up to date on the artists via news posts. The superuser can create many different posts about the artist in the news post admin page.
 
         6. As superuser, I don’t want users to be able to order product if there is none left in stock.
-           If product has a stock_quantity of 0, the add to basket buttons are inactivated and on the main merchandise page to say that it is soldout. 
+           If product has a stock_quantity of 0, the add to bag buttons are inactivated and on the main merchandise page to say that it is soldout. 
 
-            ![Image showing out of stock message with no add to basket button available](/media/readme/userstories/nobutton.png)
+            ![Image showing out of stock message with no add to bag button available](/media/readme/userstories/nobutton.png)
             ![Image showing out of stock message on merchandise page](/media/readme/userstories/soldout.png)
        
 
@@ -320,9 +320,9 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
   - Back to shop link works.
   - Add to bag button works, message shows with bag contents.
   - Success message checkout button, close buttons and view bag link works.
-  - bag in nav updates to show number of items in basket and current grand total.
+  - bag in nav updates to show number of items in bag and current grand total.
   - When a product has only one left in stock and the user buys it, it will display a sold out text afterwards.
-  - When a product has no stock left, add to basket buttons aren't available and sold out displays on merchandise and merchandise info pages. 
+  - When a product has no stock left, add to bag buttons aren't available and sold out displays on merchandise and merchandise info pages. 
   - Product Admin functionality only shows for superusers.
   - Product admin edit button opens Edit Merchandise Page.
 
@@ -330,7 +330,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
   - Edit item opens a collapsible to edit quantity. Quantity values are only available for items not in limited stock.
   - Update bag and cancel button both work.
   - Upon bag update success message shows
-  - Remove product button opens a delete confirmation, successfully deletes product from basket and success message shows.
+  - Remove product button opens a delete confirmation, successfully deletes product from bag and success message shows.
   - Continue shoppping link takes user back to merchandise page.
   - Checkout button takes user to checkout page
   - When editing bag, totals and delivery update accordingly.
