@@ -75,7 +75,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
 -   ## [Pep8 validation](http://pep8online.com/) 
    There was some trouble given over the length of some lines of code. But when I shortened them it gave the error of
-   'SyntaxError: EOL while scanning string literal' so I decided to keep the lines longer for functionality and for me its easier to identify problems while working. But besides that I didn't have any errors in the python I wrote thankfully. 
+   'SyntaxError: EOL while scanning string literal' so I decided to keep the lines longer for functionality and for me its easier to identify problems while working. But besides that I didn't have any errors in the python I wrote thankfully. Here are some of the passings for my python code below. 
     
    -  ### Initial/final testing
    ![settings pass](/media/pep8/settingspep8.png) 
@@ -227,7 +227,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
         5. As a first time visitor, I expect the site to look good on my mobile device. This was designed with a mobile first point of view and easily navigable for a mobile user. And below in order are the mobile nav, mobile home, mobile news and mobile merchandise pages.
         
         ![Image mobile navbar](/media/readme/userstories/mobilenav.png)
-        ![MobileHome](/media/readme/user/stories/mobilehome.png)
+        ![MobileHome](/media/readme/userstories/mobilehome.png)
         ![MobileNews](/media/readme/userstories/mobilenews.png)
         ![MobileMerch](/media/readme/userstories/mobilemerch.png)
 
