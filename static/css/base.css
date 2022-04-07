@@ -124,6 +124,10 @@ footer {
     margin-top: 30%;
 }
 
+.newsmobile-space {
+    min-height: 50px;
+}
+
 /* Banner Image */
 
 .mobile-image {
@@ -341,6 +345,10 @@ a:hover {
 .post_header {
     margin-top: 15%;
     color: #000;
+}
+
+.newspost_header {
+    margin-top: 35%;
 }
 
 
