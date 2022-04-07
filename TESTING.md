@@ -26,10 +26,6 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
     - merchandise.html
 
        ![merchandise.html validation](/media/html/merchhtml.png)
-
-    - merchandise_info.html
-
-       ![merchandise_info.html validation](/merch/html/merchinfohtml.png)
   
     - add_merch.html
 
