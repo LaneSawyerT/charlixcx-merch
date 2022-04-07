@@ -6,7 +6,7 @@ This website was created for Milestone 4
 
 ![Image showing the website displayed on different screen sizes](/media/readme/responsive.png)
 
-![link to testing.md](TESTING.md)
+![TESTING.MD](TESTING.md)
 
 ## Contents 
 
