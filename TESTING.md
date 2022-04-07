@@ -337,10 +337,6 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
 ## Bugs
 
-   ### Found and Fixed 
+   ### Found  
    - There seems to be an issue with webhooks in Stripe and the email confirmation after an order sends occasionally but not always. I'm not sure how to fix that.
    - There are performance issues as shown in the lighthouse screenshots and it seems that the Stripe/Cloudinary make the web page load a bit slow.
-   
-
-
-   ### Existing
