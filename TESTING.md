@@ -96,15 +96,18 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
        
 
 -   ## [Lighthouse testing in devtools](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) 
+   - There was many issues with the performance part of the lighthouse testing and it seems to be from Stripe and Cloudinary that makes loading times a bit longer.
 
     ### Home page
        + Mobile 
 
-          ![Mobile lighthouse scores for home page](/docs/readme-assets/testing_images/home-lighthouse.png)
+          ![Mobile lighthouse scores for home page](/media/lighthouse/mobilelh.png)
 
        + Desktop
 
-          ![Desktop lighthouse scores for home page](/docs/readme-assets/testing_images/home-desktop.png)
+          ![Desktop lighthouse scores for home page](/media/lighthouse/homelh.png)
+       + Error source
+          ![Error lighthouse performance for home page](/media/lighthouse/errorlh.png)
 
     ### Shop page
        + Mobile 
