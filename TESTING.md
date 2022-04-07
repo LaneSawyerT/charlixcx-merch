@@ -9,8 +9,7 @@
       * [Lighthouse testing](#lighthouse-testing-in-devtools)
    - [Testing User Stories](#testing-user-stories)
    - [Bugs](#bugs)
-      * [Found and Fixed](#found-and-fixed)
-      * [Existing](#existing)
+      * [Found and Fixed](#found)
 
 
 ## Automated Testing
