@@ -419,7 +419,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
 
 - Firefox inspect was used to test responsiveness throughout.
-- Viewed physically on Macbook air 13", iphone XR and iphone 10.
+- Viewed physically on Macbook air 13", iphone XR and iphone 10 with Safari and Ecosia broswers.
        
 
 ## Bugs
