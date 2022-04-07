@@ -219,11 +219,15 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
            lighthouse testing in the devtools.
 
         5. As a first time visitor, I expect the site to look good on my mobile device. This was designed with a mobile first point of view and easily navigable for a mobile user.
+        * have to click on each individual
 
-            ![Image mobile navbar](/docs/readme/userstories/mobilenav.png)
-            ![Image mobile navbar](/docs/readme/userstories/mobilehome.png)
-            ![Image mobile news](/docs/readme/userstories/mobilenews.png)
-            ![Image mobile merch](/docs/readme/userstories/mobilemerch.png)
+         ![Image mobile navbar](/media/readme/userstories/mobilenav.png)
+
+         ![Image mobile navbar](/media/readme/userstories/mobilehome.png)
+
+         ![Image mobile news](/media/readme/userstories/mobilenews.png)
+
+         ![Image mobile merch](/media/readme/userstories/mobilemerch.png)
 
    - #### Registered Returning Visitor Goals
         1. As a returning visitor, I want to be able to see previous order history. Users can make their way to their profile and see that their order history is there.
@@ -388,11 +392,12 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
   - Registration successfully adds a new user and their profile.
 
 
-- Firefox inspect was used to test responsiveness throughout.
-- Viewed physically on Macbook air 13", iphone XR and iphone 10 with Safari and Ecosia broswers.
-       
 
 ## Bugs
+
+* Firefox inspect was used to test responsiveness throughout.
+* Viewed physically on Macbook air 13", iphone XR and iphone 10 with Safari and Ecosia broswers.
+       
 
    ### Found  
    - There seems to be an issue with webhooks in Stripe and the email confirmation after an order sends occasionally but not always. I'm not sure how to fix that.
