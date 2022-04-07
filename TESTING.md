@@ -8,6 +8,7 @@
       * [Pep8 validation](#pep8-validation)
       * [Lighthouse testing](#lighthouse-testing-in-devtools)
    - [Testing User Stories](#testing-user-stories)
+   - [Manual testing](#manual-testing)
    - [Bugs](#bugs)
       * [Found and Fixed](#found)
 
@@ -325,6 +326,100 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
             ![Image showing out of stock message with no add to basket button available](/media/readme/userstories/nobutton.png)
             ![Image showing out of stock message on merchandise page](/media/readme/userstories/soldout.png)
        
+
+## Manual Testing
+
+-  I try to test as much as I can while in development and here are my findings after testing it in Chrome, Firefox, Safari, opera, and Ecosia and Brave browsers.
+
+### Home Page/index.html 
+  - Nav links from main menu works
+  - Nav links in 'My Account" change depending on users log in and superuser status.
+  - Logo takes user to home page.
+  - Bag icon takes user to view bag page
+  - Social links work and open in a new window.
+  - Other links in footer work and change according to user log in status.
+  - Hover effects work on all links and buttons on main nav
+
+### Merchandise page
+  - Search bar works for searching merchandise for logged in and non logged in users.
+  - View all merchandise allows user to view all merchandise
+  - Clicking on the image or merchandise product name will bring the user to the merchandise info page
+  - All merchandise should have an image, backup image shows if a broken image. 
+
+### Merchandise info page
+  - Back to shop link works.
+  - Add to bag button works, message shows with bag contents.
+  - Success message checkout button, close buttons and view bag link works.
+  - bag in nav updates to show number of items in basket and current grand total.
+  - When a product has only one left in stock and the user buys it, it will display a sold out text afterwards.
+  - When a product has no stock left, add to basket buttons aren't available and sold out displays on merchandise and merchandise info pages. 
+  - Product Admin functionality only shows for superusers.
+  - Product admin edit button opens Edit Merchandise Page.
+
+### Bag Page
+  - Edit item opens a collapsible to edit quantity. Quantity values are only available for items not in limited stock.
+  - Update bag and cancel button both work.
+  - Upon bag update success message shows
+  - Remove product button opens a delete confirmation, successfully deletes product from basket and success message shows.
+  - Continue shoppping link takes user back to merchandise page.
+  - Checkout button takes user to checkout page
+  - When editing bag, totals and delivery update accordingly.
+  - Toast messages close button works.
+
+### Checkout Page
+  - Checkout form prefills if user has saved information on their profile page
+  - Back to bag link works
+  - Checking save info, saves users information to profile.
+  - Checking save info saves users address & delivery address if provided 
+  - Unchecking save info, does not save users info
+  - Form will not submit without required fields completed
+  - Form will not submit with white space as an entry in the required. No error message working as of yet
+
+### Checkout Success Page
+  - The success messages show, one for saving info if that was selected and one for order.
+  - The information is all there and table filled with merchandise information. Table should scroll horizontallly on smaller screens.
+  - Confirmation email should have sent to user with correct information but only works if webhooks on stripe do and that isn't always
+  - Back to shop button takes user back to merchandise page.
+  - If showing an old order, back to profile button should do just that if user has their profile set up.
+
+### Edit Merchandise page
+  - Cancel links at top and bottom of page take user back to merchandise page.
+  - Form is prefilled with current information
+  - Submit Changes button works and changes are reflected in database.
+  - Form will not submit without required fields completed
+  - Form will not submit where required fields are just whitespace in required fields.
+
+### Add Merchandise Page
+  - Cancel links at top and bottom of page take user back to merchandise page.
+  - Add merchandise button works with merchandise successfully added to database and success message shown.
+  - Form will not submit without required fields completed
+  - Form will not submit where required fields are just whitespace in the required. It will redirect them to the page.
+
+### Profile page
+  - Liked news posts shows at the top of their profile.
+  - Edit info button opens edit info form
+  - Edit info form should be pre-filled with existing information if any is there.
+  - Edit info should successfully update a users information.
+  - Clicking on order number opens order details.
+
+### News Page
+  - All News posts should have an image, backup image shows if no image supplied or broken.
+  - When user clicks on news post it will bring them to that specific post.
+  - Author and time and date appear at the end of the post.
+  - If more than 5 posts will have more on the next page.
+
+### Post Details page
+  - When user clicks on the heart button if they are logged in it will appear back on their profile as liked.
+  - All info for the news posts is there with sources available
+  - Author and time and date appear at the end of the post.
+  
+### Registration page
+  - Registration form won't submit without required information.
+  - Registration successfully adds a new user and their profile.
+
+
+- Firefox inspect was used to test responsiveness throughout.
+- Viewed physically on Macbook air 13", iphone XR and iphone 10.
        
 
 ## Bugs
@@ -332,5 +427,4 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
    ### Found  
    - There seems to be an issue with webhooks in Stripe and the email confirmation after an order sends occasionally but not always. I'm not sure how to fix that.
    - There are performance issues as shown in the lighthouse screenshots and it seems that the Stripe/Cloudinary make the web page load a bit slow.
-   - On mobile the phone number on the footer is blackened because it perceives it as a number to call.
-   
+   - On mobile the phone number on the footer is blackened because it perceives it as a number to call and will be difficult for users to see. 

@@ -261,6 +261,7 @@ Here are some of the issues I've encountered while writing this project.
 
 -   Had issues with the local images display so moved them onto Cloudinary and call them on the base.html in the script for css.
 
+-   Depending on the browser for the user the banner image on index.html could be formatted slightly odd.
 
 
 ## Testing
