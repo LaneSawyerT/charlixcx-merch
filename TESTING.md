@@ -218,16 +218,12 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
            All links are aria labelled, all images have alternative text and the colour contrast ratio passes 
            lighthouse testing in the devtools.
 
-        5. As a first time visitor, I expect the site to look good on my mobile device. This was designed with a mobile first point of view and easily navigable for a mobile user.
-        * have to click on each individual
-
-         ![Image mobile navbar](/media/readme/userstories/mobilenav.png)
-
-         ![Image mobile navbar](/media/readme/userstories/mobilehome.png)
-
-         ![Image mobile news](/media/readme/userstories/mobilenews.png)
-
-         ![Image mobile merch](/media/readme/userstories/mobilemerch.png)
+        5. As a first time visitor, I expect the site to look good on my mobile device. This was designed with a mobile first point of view and easily navigable for a mobile user. And below in order are the mobile nav, mobile home, mobile news and mobile merchandise pages.
+        
+        ![Image mobile navbar](/media/readme/userstories/mobilenav.png)
+        ![MobileHome](/media/readme/mobilehome.png)
+        ![MobileNews](/media/readme/userstories/mobilenews.png)
+        ![MobileMerch](/media/readme/userstories/mobilemerch.png)
 
    - #### Registered Returning Visitor Goals
         1. As a returning visitor, I want to be able to see previous order history. Users can make their way to their profile and see that their order history is there.
