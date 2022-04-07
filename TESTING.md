@@ -96,7 +96,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
        
 
 -   ## [Lighthouse testing in devtools](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) 
-   - There was many issues with the performance part of the lighthouse testing and it seems to be from Stripe and Cloudinary that makes loading times a bit longer.
+   - There was issues with the performance part of the lighthouse testing on the index page and it seems to be from Stripe and Cloudinary that makes loading times a bit longer. Since the images would only appear in a css folder that appears on cloudinary but thankfully the merch and news do not have this issue.
 
     ### Home page
        + Mobile 
@@ -108,78 +108,65 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
           ![Desktop lighthouse scores for home page](/media/lighthouse/homelh.png)
        + Error source
           ![Error lighthouse performance for home page](/media/lighthouse/errorlh.png)
+      + Error source
+          ![Error lighthouse performance for home page](/media/lighthouse/error2lh.png)
 
-    ### Shop page
+
+    ### News page
        + Mobile 
 
-          ![Mobile lighthouse scores for shop page](/docs/readme-assets/testing_images/shop-mobile.png)
+          ![News Mobile lighthouse scores ](/media/lighthouse/mobilenewslh.png)
 
        + Desktop
 
-          ![Desktop lighthouse scores for shop page](/docs/readme-assets/testing_images/shop-desktop.png)
+          ![News Desktop lighthouse scores ](/media/lighthouse/newslh.png)
 
-    ### Add Product page
+    ### Merch page
        + Mobile 
 
-          ![Mobile lighthouse scores for add product page](/docs/readme-assets/testing_images/add-product-mobile.png)
+          ![Mobile lighthouse scores for merch page](/media/lighthouse/mobilemerchlh.png)
 
        + Desktop
 
-          ![Desktop lighthouse scores for add product page](/docs/readme-assets/testing_images/add-product-desktop.png)
-
-    ### Edit Product page
-       + Mobile 
-
-          ![Mobile lighthouse scores for edit product page](/docs/readme-assets/testing_images/edit-product-mobile.png)
-
-       + Desktop
-
-          ![Desktop lighthouse scores for edit product page](/docs/readme-assets/testing_images/edit-product-desktop.png)
+          ![Desktop lighthouse scores for merch page](/media/lighthouse/merchlh.png)
 
     ### Profile page
        + Mobile 
 
-          ![Mobile lighthouse scores for profile page](/docs/readme-assets/testing_images/profile-mobile.png)
+          ![Mobile lighthouse scores for profile page](/media/lighthouse/mobileprofilelh.png)
 
        + Desktop
 
-          ![Desktop lighthouse scores for profile page](/docs/readme-assets/testing_images/profile-desktop.png)
+          ![Desktop lighthouse scores for profile page](/media/lighthouse/profilelh.png)
 
-    ### Event page
-       + Mobile 
+    ### Add/Edit page
+       + Add 
 
-          ![Mobile lighthouse scores for event page](/docs/readme-assets/testing_images/events-mobile.png)
+          ![lighthouse scores for add merch page](/media/lighthouse/addlh.png)
 
-       + Desktop
+       + Edit
 
-          ![Desktop lighthouse scores for event page](/docs/readme-assets/testing_images/events-desktop.png)
+          ![lighthouse scores for edit merch page](/media/lighthouse/editlh.png)
 
-    ### Add Event page
-       + Mobile 
+    ### Post detail/ Merch Info page
+       + Post Detail 
 
-          ![Mobile lighthouse scores for add event page](/docs/readme-assets/testing_images/add-event-mobile.png)
+          ![Post detail lighthouse scores ](/media/lighthouse/postdetaillh.png)
 
-       + Desktop
+       + Merch info
 
-          ![Desktop lighthouse scores for add event page](/docs/readme-assets/testing_images/add-event-desktop.png)
+          ![Merch Info lighthouse scores ](/media/lighthouse/merchinfolh.png)
 
-     ### Edit Event page
-       + Mobile 
+     ### Bag page
 
-          ![Mobile lighthouse scores for edit event page](/docs/readme-assets/testing_images/edit-event-mobile.png)
+       + Bag
 
-       + Desktop
+          ![Desktop lighthouse scores for edit event page](/media/lighthouse/baglh.png)
 
-          ![Desktop lighthouse scores for edit event page](/docs/readme-assets/testing_images/desktop-edit-event.png)
+    ### Checkout page
+       + Checkout
 
-    ### Contact page
-       + Mobile 
-
-          ![Mobile lighthouse scores for contact page](/docs/readme-assets/testing_images/contact-report-mobile.png)
-
-       + Desktop
-
-          ![Desktop lighthouse scores for contact page](/docs/readme-assets/testing_images/contact-desktop.png)
+          ![Desktop lighthouse scores for contact page](/media/lighthouse/checkoutlh.png)
         
         
 ## Testing User Stories 
