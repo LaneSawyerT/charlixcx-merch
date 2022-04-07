@@ -49,14 +49,11 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
     - news.html
 
-       ![event.html validation](/media/html/news.png)
+       ![event.html validation](/media/html/newshtml.png)
       
     - Checkout_success.html
 
        ![Checkout_success.html validation](/media/html/checkoutsuccesshtml.png)
-
-    - Post detail.html
-       ![Post detail.html validation]()
 
 
 -   ## [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
@@ -70,8 +67,6 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
     
 
     - stripe_elements.js
-       * Same as base.js plus stripe variable required by stripe so justified.
-
        ![stripe_elements.js validation](/media/readme/stripejs.png)
 
     - quantity_input_element.html 
@@ -80,7 +75,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
 -   ## [Pep8 validation](http://pep8online.com/) 
    There was some trouble given over the length of some lines of code. But when I shortened them it gave the error of
-   'SyntaxError: EOL while scanning string literal' so I decided to keep the lines longer for functionality and for me its easier to identify problems while working. But besides that I didn't have any errors in the pythong I wrote thankfully. 
+   'SyntaxError: EOL while scanning string literal' so I decided to keep the lines longer for functionality and for me its easier to identify problems while working. But besides that I didn't have any errors in the python I wrote thankfully. 
     
     ### Initial/final testing
        ![settings pass](/media/pep8/settingspep8) 
@@ -95,75 +90,54 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 -   ## [Lighthouse testing in devtools](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) 
    - There was issues with the performance part of the lighthouse testing on the index page and it seems to be from Stripe and Cloudinary that makes loading times a bit longer. Since the images would only appear in a css folder that appears on cloudinary but thankfully the merch and news do not have this issue.
 
-    ### Home page
-       + Mobile 
-
-          ![Mobile lighthouse scores for home page](/media/lighthouse/mobilelh.png)
-
-       + Desktop
-
-          ![Desktop lighthouse scores for home page](/media/lighthouse/homelh.png)
+### Home page
+   + Mobile 
+   ![Mobile lighthouse scores for home page](/media/lighthouse/mobilelh.png)
+   + Desktop
+   ![Desktop lighthouse scores for home page](/media/lighthouse/homelh.png)
        + Error source
           ![Error lighthouse performance for home page](/media/lighthouse/errorlh.png)
-      + Error source
+       + Error source
           ![Error lighthouse performance for home page](/media/lighthouse/error2lh.png)
 
 
-    ### News page
-       + Mobile 
+### News page
+   + Mobile 
+   ![News Mobile lighthouse scores ](/media/lighthouse/mobilenewslh.png)
+   + Desktop
+   ![News Desktop lighthouse scores ](/media/lighthouse/newslh.png)
 
-          ![News Mobile lighthouse scores ](/media/lighthouse/mobilenewslh.png)
+### Merch page
+   + Mobile 
+   ![Mobile lighthouse scores for merch page](/media/lighthouse/mobilemerchlh.png)
+   + Desktop
+   ![Desktop lighthouse scores for merch page](/media/lighthouse/merchlh.png)
 
-       + Desktop
+### Profile page
+   + Mobile 
+   ![Mobile lighthouse scores for profile page](/media/lighthouse/mobileprofilelh.png)
+   + Desktop
+   ![Desktop lighthouse scores for profile page](/media/lighthouse/profilelh.png)
 
-          ![News Desktop lighthouse scores ](/media/lighthouse/newslh.png)
+### Add/Edit page
+   + Add 
+   ![lighthouse scores for add merch page](/media/lighthouse/addlh.png)
+   + Edit
+   ![lighthouse scores for edit merch page](/media/lighthouse/editlh.png)
 
-    ### Merch page
-       + Mobile 
+### Post detail/ Merch Info page
+   + Post Detail 
+   ![Post detail lighthouse scores ](/media/lighthouse/postdetaillh.png)
+   + Merch info
+   ![Merch Info lighthouse scores ](/media/lighthouse/merchinfolh.png)
 
-          ![Mobile lighthouse scores for merch page](/media/lighthouse/mobilemerchlh.png)
+### Bag page
+   + Bag
+   ![Desktop lighthouse scores for edit event page](/media/lighthouse/baglh.png)
 
-       + Desktop
-
-          ![Desktop lighthouse scores for merch page](/media/lighthouse/merchlh.png)
-
-    ### Profile page
-       + Mobile 
-
-          ![Mobile lighthouse scores for profile page](/media/lighthouse/mobileprofilelh.png)
-
-       + Desktop
-
-          ![Desktop lighthouse scores for profile page](/media/lighthouse/profilelh.png)
-
-    ### Add/Edit page
-       + Add 
-
-          ![lighthouse scores for add merch page](/media/lighthouse/addlh.png)
-
-       + Edit
-
-          ![lighthouse scores for edit merch page](/media/lighthouse/editlh.png)
-
-    ### Post detail/ Merch Info page
-       + Post Detail 
-
-          ![Post detail lighthouse scores ](/media/lighthouse/postdetaillh.png)
-
-       + Merch info
-
-          ![Merch Info lighthouse scores ](/media/lighthouse/merchinfolh.png)
-
-     ### Bag page
-
-       + Bag
-
-          ![Desktop lighthouse scores for edit event page](/media/lighthouse/baglh.png)
-
-    ### Checkout page
-       + Checkout
-
-          ![Desktop lighthouse scores for contact page](/media/lighthouse/checkoutlh.png)
+### Checkout page
+   + Checkout
+   ![Desktop lighthouse scores for contact page](/media/lighthouse/checkoutlh.png)
         
         
 ## Testing User Stories 
