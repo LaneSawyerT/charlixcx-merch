@@ -6,6 +6,8 @@ This website was created for Milestone 4
 
 ![Image showing the website displayed on different screen sizes]()
 
+![link to testing.md](TESTING.md)
+
 ## Contents 
 
 - [User Experience (UX)](#user-experience-ux)
