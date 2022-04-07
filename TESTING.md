@@ -77,14 +77,20 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
    There was some trouble given over the length of some lines of code. But when I shortened them it gave the error of
    'SyntaxError: EOL while scanning string literal' so I decided to keep the lines longer for functionality and for me its easier to identify problems while working. But besides that I didn't have any errors in the python I wrote thankfully. 
     
-    ### Initial/final testing
-       ![settings pass](/media/pep8/settingspep8) 
-       ![merch pass](/media/pep8/merchpep8) 
-       ![profile pass](/media/pep8/profilepep8) 
-       ![urls pass](/media/pep8/settingspep8) 
-       ![checkout pass](/media/pep8/checkoutpep8) 
-       ![news pass](/media/pep8/newspep8) 
-       ![bag pass](/media/pep8/bagpep8) 
+   -  ### Initial/final testing
+   ![settings pass](/media/pep8/settingspep8.png) 
+
+![merch pass](/media/pep8/merchpep8.png) 
+
+![profile pass](/media/pep8/profilepep8.png) 
+
+![urls pass](/media/pep8/settingspep8.png) 
+
+![checkout pass](/media/pep8/checkoutpep8.png) 
+
+![news pass](/media/pep8/newspep8.png) 
+
+![bag pass](/media/pep8/bagpep8.png) 
        
 
 -   ## [Lighthouse testing in devtools](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) 
@@ -121,7 +127,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
 ### Add/Edit page
    + Add 
-   ![lighthouse scores for add merch page](/media/lighthouse/addlh.png)
+   ![lighthouse scores for add merch page](/media/lighthouse/addmerchlh.png)
    + Edit
    ![lighthouse scores for edit merch page](/media/lighthouse/editlh.png)
 
@@ -153,7 +159,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
            brackets beside the bag. In addition when a product is added to the bag, success 
            message contains a link to view bag.
 
-             ![Image showing bag in nav menu](/media/readme/bagtotal.png)
+             ![Image showing bag in nav menu](/media/readme/userstories/bagtotal.png)
              ![Image showing Success message view bag link](/media/readme/userstories/addtobag.png)
 
         3. As an unregistered visitor, I want to be able to edit my bag.
@@ -221,7 +227,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
         5. As a first time visitor, I expect the site to look good on my mobile device. This was designed with a mobile first point of view and easily navigable for a mobile user. And below in order are the mobile nav, mobile home, mobile news and mobile merchandise pages.
         
         ![Image mobile navbar](/media/readme/userstories/mobilenav.png)
-        ![MobileHome](/media/readme/mobilehome.png)
+        ![MobileHome](/media/readme/user/stories/mobilehome.png)
         ![MobileNews](/media/readme/userstories/mobilenews.png)
         ![MobileMerch](/media/readme/userstories/mobilemerch.png)
 
