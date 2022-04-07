@@ -284,7 +284,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
              ![Image showing admin superuser](/media/readme/userstories/superuser.png)
              
-        4. As superuser, I want to be check availability of limited products. Users can go onto the merchandise page and click on edit and see the limited number of the limitted product on display and update accordingly. 
+        4. As superuser, I want to be check availability of limited products. Users can go onto the merchandise page and click on edit and see the limited number of the limited product on display and update accordingly. 
 
              ![Image showing delete user in admin panel](/media/readme/userstories/limitednum.png)
 
