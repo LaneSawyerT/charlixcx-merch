@@ -215,7 +215,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
         6. As an unregistered visitor, I expect the site to look good on my mobile device.
            The site was designed with mobile first in mind
 
-             ![Image showing mobile home page](/docs/readme-assets/testing_images/home.png)
+             ![Image showing mobile home page](/media/readme/userstories/homepage.png)
 
         7. As an unregistered visitor, I want to easily Search the website for products
            
@@ -257,9 +257,12 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
            All links are aria labelled, all images have alternative text and the colour contrast ratio passes 
            lighthouse testing in the devtools.
 
-        5. As a first time visitor, I expect the site to look good on my mobile device. This was designed with a mobile first point of view.
+        5. As a first time visitor, I expect the site to look good on my mobile device. This was designed with a mobile first point of view and easily navigable for a mobile user.
 
-            ![Image mobile design](/docs/readme-assets/testing_images/mobile_nav.png)
+            ![Image mobile navbar](/docs/readme/userstories/mobilenav.png)
+            ![Image mobile navbar](/docs/readme/userstories/mobilehome.png)
+            ![Image mobile news](/docs/readme/userstories/mobilenews.png)
+            ![Image mobile merch](/docs/readme/userstories/mobilemerch.png)
 
    - #### Registered Returning Visitor Goals
         1. As a returning visitor, I want to be able to see previous order history. Users can make their way to their profile and see that their order history is there.
