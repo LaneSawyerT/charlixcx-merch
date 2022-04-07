@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import NewsPost, Category
 from django_summernote.admin import SummernoteModelAdmin
 
+
 # Register your models here.
 @admin.register(NewsPost)
 class PostAdmin(SummernoteModelAdmin):
@@ -18,5 +19,6 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
         'tag_name',
     )
+
 
 admin.site.register(Category, CategoryAdmin)

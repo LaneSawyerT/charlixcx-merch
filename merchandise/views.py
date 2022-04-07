@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from .models import Merch, Category
 from .forms import MerchForm
 
+
 # Create your views here.
 def all_merch(request):
     """ A view to show all merchandise """
@@ -42,12 +43,12 @@ def all_merch(request):
             if not query:
                 messages.error(request, "Nothing was entered")
                 return redirect(reverse('merchandise'))
-            
+
             queries = Q(product_name__icontains=query) | Q(description__icontains=query)
             merch = merch.filter(queries)
 
     current_sorting = f'{sort}-{direction}'
-    
+
     context = {
         'merch': merch,
         'search_term': query,
@@ -87,7 +88,7 @@ def add_merchandise(request):
             messages.error(request, 'Failed to add merchandise. Please ensure the form is valid.')
     else:
         form = MerchForm()
-        
+
     template = 'merchandise/add_merchandise.html'
     context = {
         'form': form,

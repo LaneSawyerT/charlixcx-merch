@@ -23,7 +23,8 @@ class Merch(models.Model):
     class Meta:
         verbose_name_plural = 'Merch'
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     product_name = models.CharField(max_length=254)
     description = models.TextField()

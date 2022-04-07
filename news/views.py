@@ -5,9 +5,10 @@ from django.http import HttpResponseRedirect
 from .models import NewsPost, Category
 from profiles.models import UserProfile
 
+
 # Create your views here.
 class NewsPostList(generic.ListView):
-    
+
     model = NewsPost
 
     queryset = None
@@ -55,5 +56,5 @@ class PostLike(View):
             post.likes.remove(user)
         else:
             post.likes.add(user)
-        
+
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))

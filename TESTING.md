@@ -7,9 +7,7 @@
       * [JS validation](#jshint-javascript-validator)
       * [Pep8 validation](#pep8-validation)
       * [Lighthouse testing](#lighthouse-testing-in-devtools)
-      * [Unit testing](#unit-testing)
    - [Testing User Stories](#testing-user-stories)
-   - [Manual testing](#manual-testing)
    - [Bugs](#bugs)
       * [Found and Fixed](#found-and-fixed)
       * [Existing](#existing)
@@ -85,13 +83,18 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
 
 -   ## [Pep8 validation](http://pep8online.com/) 
+   There was some trouble given over the length of some lines of code. But when I shortened them it gave the error of
+   'SyntaxError: EOL while scanning string literal' so I decided to keep the lines longer for functionality and for me its easier to identify problems while working. But besides that I didn't have any errors in the pythong I wrote thankfully. 
     
     ### Initial/final testing
-       [this on stack overflow](https://stackoverflow.com/questions/53158284/python-giving-a-e501-line-too-long-error?noredirect=1&lq=1) and so implemented it and didn't seem to break the auth_password_validators
-
-       ![settings.py validation](/docs/readme-assets/testing_images/settings.png)
-       ![settings.py retest](/docs/readme-assets/testing_images/fixedsettings.png)
-
+       ![settings pass](/media/pep8/settingspep8) 
+       ![merch pass](/media/pep8/merchpep8) 
+       ![profile pass](/media/pep8/profilepep8) 
+       ![urls pass](/media/pep8/settingspep8) 
+       ![checkout pass](/media/pep8/checkoutpep8) 
+       ![news pass](/media/pep8/newspep8) 
+       ![bag pass](/media/pep8/bagpep8) 
+       
 
 -   ## [Lighthouse testing in devtools](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) 
 
@@ -176,41 +179,7 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
 
           ![Desktop lighthouse scores for contact page](/docs/readme-assets/testing_images/contact-desktop.png)
         
-    
--   ## Unit Testing 
-    I knew at the start that I wanted to try and implement automated testing. I was worried I'd spend too long trying to get the testing right that I wouldn't get all the project requirements done, so I left it to the end, which I realise is not how you do it.
-    Tried to get as much done in the time I had left, not as much as I would have liked but its something that I can improve and learn more about going forward.
-
-      ![Coverage for project](/docs/readme-assets/testing_images/coverage-report.png)
-  
-    ### Home app
-
-      ![Coverage for home app](/docs/readme-assets/testing_images/home-coverage.png)
-
-    ### Contact app
-
-      ![Coverage for contact app](/docs/readme-assets/testing_images/contact-coverage.png)
-
-    ### Profile app
-
-      ![Coverage for profile app](/docs/readme-assets/testing_images/profiles-coverage.png)
-
-    ### Products app
-
-      ![Coverage for products app](/docs/readme-assets/testing_images/products-coverage.png)
-
-    ### Checkout app
-
-      ![Coverage for checkout app](/docs/readme-assets/testing_images/checkout-coverage.png)
-
-    ### Basket app
-
-      ![Coverage for basket app](/docs/readme-assets/testing_images/basket-coverage.png)
-
-    ### Events app
-
-      ![Coverage for events app](/docs/readme-assets/testing_images/events-coverage.png)
-
+        
 ## Testing User Stories 
 
    - #### Unregistered Visitor
@@ -364,124 +333,14 @@ The W3C Markup Validator and W3C CSS Validator were used to validate all the mai
             ![Image showing out of stock message with no add to basket button available](/media/readme/userstories/nobutton.png)
             ![Image showing out of stock message on merchandise page](/media/readme/userstories/soldout.png)
        
-      
-## Manual Testing
-
--  I generally test as I'm developing as well as at the end so some of the findings are from during development. The website was viewed with browsers: Google chrome, Safari, Microsoft Edge, Firefox and Opera. Viewed all pages on each and checked the following:
-
-### Home Page/base.html 
-  - Nav links from main menu works
-  - Nav links change depending on users log in and superuser status.
-  - Logo takes user to home page.
-  - Shop vinyl spinning button takes user to shop page.
-  - Basket icon takes user to view basket page
-  - Banner takes user to event page if logged in.
-  - Banner takes user to register page if not logged in.
-  - Social links work and open in a new window.
-  - Back to top link works
-  - Other links in footer work and change according to user log in status.
-  - Hover effects work on all links and buttons.
-
-### Shop page
-  - Vinyl search bar works for song, title or artist for logged in and non logged in users.
-  - Genre header links allow user to see all products of that genre.
-    * Hover effect wasn't working, .genre h3 a styling was overriding the hover effect of a:hover. 
-  - Genre header links are underlined on small and medium screens to make it more obvious that they are clickable as hover effects aren't in play.
-  - View all link allows user to view all products
-  - Carousel arrows work for those genres with more than one product
-  - Details buttons open product page.
-  - All products should have an image, backup image shows if a broken image. 
-    * Removed default image from one of the products and it broke the site. Fixed the default_images view to use 
-    one of the other images if no default image, else product not displayed. As adding a default image is required 
-    on the Add Vinyl page, this shouldn't happen. 
-
-### Product Details page
-  - Back to shop link works.
-  - Add to basket button works, message shows with basket contents.
-  - Success message checkout button, close buttons and view basket link works.
-  - Basket in nav updates to show number of items in basket and current grand total.
-  - When a product has only one left in stock, a hurry paragraph shows. 
-  - When a product has no stock left, add to basket buttons aren't available and an Out of stock paragraph shows.
-  - Product Admin functionality only shows for superusers.
-  - Product admin edit button opens Edit Product Page.
-  - Product admin delete button opens a delete confirmation, cancel button closes it and delete button, successfully deletes product from database and success message shows.
-
-### View Basket Page
-  - Edit item opens a collapsible to edit quantity. Quantity values available are will be stock quantity of that product so will differ between them.
-  - Update basket and cancel button in the edit collapsible both work.
-  - Upon basket update success message shows
-  - Delete product button opens a delete confirmation, cancel button closes it and "Yes, I'm sure" button, successfully deletes product from basket and success message shows.
-  - Success messages within basket page shouldn't show the basket contents as that would be pointless.
-  - Continue shoppping link takes user back to shop page.
-  - Checkout button takes user to checkout page
-  - When editing basket, totals and delivery update accordingly.
-  - Toast messages close button works.
-  - Toast message vinyl icon is a different colour depending on what type of toast it is, green for success, red for error etc.
-
-### Checkout Page
-  - Checkout form prefills if user has saved information on their profile page
-  - Back to basket link works
-  - Checking save info, saves users information to profile.
-  - Checking save info saves users address & delivery address if provided to Address Book.
-  - Unchecking save info, does not save users info
-  - Form can submit without delivery data filled in
-  - Form will not submit without required fields completed
-  - Form will not submit with white space as an entry
-    * I put empty space in the first name field, I got an internal server error. Went back and filled in the name and then got a processing error. When I checked admin this was because the order had actually went through via the webhook. In development environment repeated to see what error I would get. It said "The view checkout.views.checkout didn't return an HttpResponse object. It returned None instead." I wrote a validators.py file and added it into my required models and migrated, this did not fix the issue. I put return redirect('checkout') in the else block if form not valid, that seemed to solve the issue and now shows an error message. So didn't end up migrating changes to the model to Postgres database. I was wondering why the order and payment still went through, but I realised as stripe requires a name and my surname field was filled in, this was sufficient information for stripe but not for my model. Now however the stripe payment goes through twice and two orders appear in database as two intents created so two pids created. As this is due to stripe accepting just the first or surname in the name field, so in stripe_element.js added a check for both names and if not show an error message. Tried to make it a toast but I couldn't get it to work, tried creating and inserting an element for it and putting in the toast html but after spending hours on it I gave up due to time restraints and just put a similar error div that is used to display stripe errors. I'm sure it was something stupid I was doing so will revisit at a later date.
-
-### Checkout Success Page
-  - The success messages show, one for saving info if that was selected and one for order.
-    * Noticed that when I have multiple messages the white background and border don't meet when I close one and when there are no 
-      messages there is a dot where they appear. Realised I'd applied the border styling to the message container div and not the 
-      toasts themselves.
-  - The information is all there and table filled with product information. Table should scroll horizontallly on smaller screens.
-  - Confirmation email should have sent to user with correct information.
-  - Back to shop button takes user back to shop page.
-  - If showing an old order, back to profile button should do just that.
-
-### Edit Product page
-  - Need to add a product link takes user to add product page
-  - Cancel links at top and bottom of page take user back to product details page.
-    * Bottom cancel link took user back to shop page not product detail. Fixed href.
-  - Form is prefilled with current information
-  - File input, shows images that have been selected.
-    * Input field was overflowing,causing horizontal scroll on mobile screen, changed bootstrap 
-      classes.
-    * On iphone a mini image view is beside the input field aswell as the image preview I coded. This is not on desktop or 
-    android phone so left in.
-  - Submit Changes button works and changes are reflected in database.
-  - Form will not submit without required fields completed
-  - Form will not submit where required fields are just whitespace.
-    * I got an error and a success message at the same time. Realise in my view the getting files section
-      and success message weren't within the if form.is_valid() block.
-
-### Add Merchandise Page
-### Profile page
-
-### Events Page
-
-### Add event page
-
-
-### Contact Us Page
-  - Cancel buttons take user back to shop page.
-    * Hadn't added cancel buttons
-  - Contact form will prefill if user has saved information to their profile.
-  - Contact form will not submit without required personal details. 
-  - Ratings work and on successful form submission, success message shown
-  - Upon contact form submission user receives a personalised acknowledgment email.
-  - Send button works, displays success message and adds record to database.
-  
-### Registration page
-  - Registration form won't submit without required information.
-  - Registration successfully adds a new user and their profile.
-
-### Error pages
- 
+       
 
 ## Bugs
 
    ### Found and Fixed 
+   - There seems to be an issue with webhooks in Stripe and the email confirmation after an order sends occasionally but not always. I'm not sure how to fix that.
+   - There are performance issues as shown in the lighthouse screenshots and it seems that the Stripe/Cloudinary make the web page load a bit slow.
+   
 
 
    ### Existing

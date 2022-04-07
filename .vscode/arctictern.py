@@ -113,7 +113,7 @@ def build_post_upgrade():
         content += FINAL_LINES
         with open(".vscode/post_upgrade.sh", "w") as f:
             f.writelines(content)
-    
+
     print("Built post_upgrade.sh. Restart your workspace for it to take effect")
 
 

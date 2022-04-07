@@ -7,13 +7,13 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4  mt-3">
             <div class="card-body">
                 <div class="mx-auto d-block col-md-6 justify-content-center">
                     {% if "placeholder" in post.featured_image.url %}
-                    <img class="img-fluid" src="{{ MEDIA_URL }}not_available.png" width="100%">
+                    <img class="img-fluid" src="{{ MEDIA_URL }}not_available.png" alt="Image Not Available">
                     {% else %}
-                    <img class="img-fluid " src=" {{ post.featured_image.url }}" width="100%">
+                    <img class="img-fluid " src=" {{ post.featured_image.url }}" alt="{{ post.post_title }}">
                     {% endif %}
                     <hr class="justify-content-center" style="width: 60px; background-color: #ff389c; height: 2px" />
 

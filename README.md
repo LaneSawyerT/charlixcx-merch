@@ -245,21 +245,19 @@ The finished project does differ a bit from the wireframes. There are less merch
     - For storing all the photos uploaded onto the site.
 
 ## Challenges 
-   Here are some of the issues I've encountered while writing this project.
+Here are some of the issues I've encountered while writing this project.
 
-    -   Styling the AllAuth templates were more difficult than first thought. While most look like buttons, they range from buttons, inputs, links and input tags. And I wanted to change their initial style of black to pink and have it maintain that throughout site. That was more difficult than thought but besides one a tag on the sign out page there shouldn't be any changed in color that are very drastic.
+-   Styling the AllAuth templates were more difficult than first thought. While most look like buttons, they range from buttons, inputs, links and input tags. And I wanted to change their initial style of black to pink and have it maintain that throughout site. That was more difficult than thought but besides one a tag on the sign out page there shouldn't be any changed in color that are very drastic.
     
-    -   Trying to create categories for news posts, which the user can click on as filters(similar to how its done in the Merchandise), was difficult. This is due to the difficulties of accessing the request method in a Django generic view. A lot of developers seem to have the same issue, but we were able to override the get_queryset method to achieve this.
+-   Trying to create categories for news posts, which the user can click on as filters(similar to how its done in the Merchandise), was difficult. This is due to the difficulties of accessing the request method in a Django generic view. A lot of developers seem to have the same issue, but we were able to override the get_queryset method to achieve this.
 
-    -   I had trouble fully understanding how to link in django with the templating. But thankfully with the help of a mentor I was able to link up the site between different Django apps. 
+-   I had trouble fully understanding how to link in django with the templating. But thankfully with the help of a mentor I was able to link up the site between different Django apps. 
 
-    -   Also I had the problem of Webhooks kept failing. When getting the information from the webhook I'd used my names and not theres, for instance county instead of state, town_or_city instead of just city, etc. The solution: Update to stripes field names to extract data from webhook.
+-   Also I had the problem of Webhooks kept failing. When getting the information from the webhook I'd used my names and not theres, for instance county instead of state, town_or_city instead of just city, etc. The solution: Update to stripes field names to extract data from webhook.
 
-    -   Had issues with deploying properly to Heroku. I apparently had a space at the end of one of the Config vars but it took me a while before I figured that out. 
+-   Had issues with deploying properly to Heroku. I apparently had a space at the end of one of the Config vars but it took me a while before I figured that out. 
 
-    -   Had issues with the local images display so moved them onto Cloudinary and call them on the base.html in the script for css.
-
-
+-   Had issues with the local images display so moved them onto Cloudinary and call them on the base.html in the script for css.
 
 
 
@@ -317,22 +315,15 @@ Testing and results can be found [here](TESTING.md)
     - ### Heroku deployment
     - Log in to Heroku, click 'New' and select 'Create New App'. In window give the app a name and choose region closest to you and then click 'Create App'. Then in Resources under Add-ons, select Heroku Postgres.
 
-       ![Image showing the Heroku menu]()
-       ![Image showing the Add-on section]()
-
     - In new app page select settings from menu, click reveal config vars and complete the following, see Stripe and AWS sections for where to get their secret key values. DATABASE_URL will have been pre-filled when you selected Postgres. USE_AWS value is True for when we have set up AWS. SECRET_KEY was generated as before with Django Secret Key generator.
       
-      ![Image showing the config vars required]()
+      ![Image showing the config vars required](/media/readme/configvars.png)
 
     - Next select 'Deploy' from menu, three options of deployment are available. If you select Heroku Git, it gives you step by step of what you need to do.
-
-      ![Image showing the deployment options]()
 
     - I chose to use Github, so you have to search and connect to your github repository. 
     
     - Click enable automatic deployment, below that in manual deploy section, you can pick and deploy a branch to ensure everything is set up correctly. 
-
-      ![Image showing manual deployment]()
     
     - You will now need to migrate and create superuser as above in Setting Up Project section.
 
@@ -390,6 +381,7 @@ Testing and results can be found [here](TESTING.md)
 
 -   * [CharliXCX](https://charlixcx.com/): Index/home banner image. And Merchandise items. 
     * [Red Bubble](https://www.redbubble.com/shop/?query=charli%20xcx&ref=search_box): More Merchandise items from here as well. 
+    * Any images on the news site has where its from sourced below each post as well.
 
  
 ### Acknowledgements
@@ -397,3 +389,4 @@ Testing and results can be found [here](TESTING.md)
 -   Code Institute for Boutique Ado walk through project and automated testing course material. Used the videos quite bit to get me started.
 -   My mentor Matthew Rudge for his time and feedback.
 -   The slack community.
+-   Friends who tested the website and let me know when errors occured. 
